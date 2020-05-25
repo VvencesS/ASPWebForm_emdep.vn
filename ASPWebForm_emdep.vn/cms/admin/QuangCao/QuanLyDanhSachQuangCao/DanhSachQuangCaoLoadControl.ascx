@@ -1,0 +1,2 @@
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="DanhSachQuangCaoLoadControl.ascx.cs" Inherits="ASPWebForm_emdep.vn.cms.admin.QuangCao.QuanLyDanhSachQuangCao.DanhSachQuangCaoLoadControl" %>
+Danh sách quảng cáo

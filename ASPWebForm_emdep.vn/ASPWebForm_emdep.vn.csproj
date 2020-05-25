@@ -105,115 +105,198 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="About.aspx" />
-    <Content Include="Contact.aspx" />
-    <Content Include="Content\bootstrap-theme.css" />
-    <Content Include="Content\bootstrap-theme.min.css" />
-    <Content Include="Content\bootstrap.css" />
-    <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\Site.css" />
-    <Content Include="Default.aspx" />
-    <Content Include="favicon.ico" />
-    <Content Include="fonts\glyphicons-halflings-regular.svg" />
-    <Content Include="Global.asax" />
-    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
-    <Content Include="fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="Content\bootstrap.min.css.map" />
-    <Content Include="Content\bootstrap.css.map" />
-    <Content Include="Content\bootstrap-theme.min.css.map" />
-    <Content Include="Content\bootstrap-theme.css.map" />
-    <None Include="Scripts\jquery-3.4.1.intellisense.js" />
-    <Content Include="Scripts\bootstrap.js" />
-    <Content Include="Scripts\bootstrap.min.js" />
-    <Content Include="Scripts\jquery-3.4.1.js" />
-    <Content Include="Scripts\jquery-3.4.1.min.js" />
-    <Content Include="Scripts\jquery-3.4.1.slim.js" />
-    <Content Include="Scripts\jquery-3.4.1.slim.min.js" />
-    <Content Include="Scripts\modernizr-2.8.3.js" />
-    <Content Include="Scripts\WebForms\DetailsView.js" />
-    <Content Include="Scripts\WebForms\Focus.js" />
-    <Content Include="Scripts\WebForms\GridView.js" />
-    <Content Include="Scripts\WebForms\Menu.js" />
-    <Content Include="Scripts\WebForms\MenuStandards.js" />
-    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjax.js" />
-    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxApplicationServices.js" />
-    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxComponentModel.js" />
-    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxCore.js" />
-    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxGlobalization.js" />
-    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxHistory.js" />
-    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxNetwork.js" />
-    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxSerialization.js" />
-    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxTimer.js" />
-    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebForms.js" />
-    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebServices.js" />
-    <Content Include="Scripts\WebForms\SmartNav.js" />
-    <Content Include="Scripts\WebForms\TreeView.js" />
-    <Content Include="Scripts\WebForms\WebForms.js" />
-    <Content Include="Scripts\WebForms\WebParts.js" />
-    <Content Include="Scripts\WebForms\WebUIValidation.js" />
-    <Content Include="Site.Master" />
-    <Content Include="ViewSwitcher.ascx" />
+    <Content Include="Admin.aspx" />
+    <Content Include="cms\admin\AdminLoadControl.ascx" />
+    <Content Include="cms\admin\css\cssAdmin.css" />
+    <Content Include="cms\admin\KhachHang\KhachHangLoadControl.ascx" />
+    <Content Include="cms\admin\Menu\MenuLoadControl.ascx" />
+    <Content Include="cms\admin\QuangCao\QuangCaoLoadControl.ascx" />
+    <Content Include="cms\admin\QuangCao\QuanLyDanhSachQuangCao\DanhSachQuangCaoLoadControl.ascx" />
+    <Content Include="cms\admin\QuangCao\QuanLyNhomQuangCao\NhomQuangCaoLoadControl.ascx" />
+    <Content Include="cms\admin\SanPham\QuanLyChatLieu\ChatLieuLoadControl.ascx" />
+    <Content Include="cms\admin\SanPham\QuanLyDanhMuc\DanhMucLoadControl.ascx" />
+    <Content Include="cms\admin\SanPham\QuanLyDonHang\DonHangLoadControl.ascx" />
+    <Content Include="cms\admin\SanPham\QuanLyMau\MauLoadControl.ascx" />
+    <Content Include="cms\admin\SanPham\QuanLyNhomSanPham\NhomLoadControl.ascx" />
+    <Content Include="cms\admin\SanPham\QuanLyPhienDauGia\PhienDauGiaLoadControl.ascx" />
+    <Content Include="cms\admin\SanPham\QuanLySanPham\SanPhamLoadControl.ascx" />
+    <Content Include="cms\admin\SanPham\QuanLySize\SizeLoadControl.ascx" />
+    <Content Include="cms\admin\SanPham\SanPhamLoadControl.ascx" />
+    <Content Include="cms\admin\TaiKhoan\TaiKhoanLoadControl.ascx" />
+    <Content Include="cms\admin\TinTuc\DanhMucTin\DanhMucTinLoadControl.ascx" />
+    <Content Include="cms\admin\TinTuc\DanhSachTinTuc\DanhSachTinTucLoadControl.ascx" />
+    <Content Include="cms\admin\TinTuc\TinTucLoadControl.ascx" />
     <Content Include="Web.config" />
-    <Content Include="Bundle.config" />
-    <Content Include="Site.Mobile.Master" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="App_Start\BundleConfig.cs" />
-    <Compile Include="About.aspx.cs">
-      <DependentUpon>About.aspx</DependentUpon>
+    <Content Include="App_Code\Database\SQLDatabase.cs" />
+    <Content Include="App_Code\Database\ChatLieu.cs" />
+    <Content Include="App_Code\Database\ChiTietDonDatHang.cs" />
+    <Content Include="App_Code\Database\ChiTietDonHang.cs" />
+    <Content Include="App_Code\Database\DangKy.cs" />
+    <Content Include="App_Code\Database\DanhMuc.cs" />
+    <Content Include="App_Code\Database\DanhMucTin.cs" />
+    <Content Include="App_Code\Database\DonDatHang.cs" />
+    <Content Include="App_Code\Database\HoaDon.cs" />
+    <Content Include="App_Code\Database\KhachHang.cs" />
+    <Content Include="App_Code\Database\LuotDauGia.cs" />
+    <Content Include="App_Code\Database\Mau.cs" />
+    <Content Include="App_Code\Database\Menu.cs" />
+    <Content Include="App_Code\Database\NhanVien.cs" />
+    <Content Include="App_Code\Database\NhomQuangCao.cs" />
+    <Content Include="App_Code\Database\NhomSanPham.cs" />
+    <Content Include="App_Code\Database\PhieuDauGia.cs" />
+    <Content Include="App_Code\Database\QuangCao.cs" />
+    <Content Include="App_Code\Database\QuyenDangNhap.cs" />
+    <Content Include="App_Code\Database\SanPham.cs" />
+    <Content Include="App_Code\Database\Size.cs" />
+    <Content Include="App_Code\Database\TinTuc.cs" />
+    <Compile Include="Admin.aspx.cs">
+      <DependentUpon>Admin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="About.aspx.designer.cs">
-      <DependentUpon>About.aspx</DependentUpon>
+    <Compile Include="Admin.aspx.designer.cs">
+      <DependentUpon>Admin.aspx</DependentUpon>
     </Compile>
-    <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Contact.aspx.cs">
-      <DependentUpon>Contact.aspx</DependentUpon>
+    <Compile Include="cms\admin\AdminLoadControl.ascx.cs">
+      <DependentUpon>AdminLoadControl.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Contact.aspx.designer.cs">
-      <DependentUpon>Contact.aspx</DependentUpon>
+    <Compile Include="cms\admin\AdminLoadControl.ascx.designer.cs">
+      <DependentUpon>AdminLoadControl.ascx</DependentUpon>
     </Compile>
-    <Compile Include="Default.aspx.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
+    <Compile Include="cms\admin\KhachHang\KhachHangLoadControl.ascx.cs">
+      <DependentUpon>KhachHangLoadControl.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Default.aspx.designer.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
+    <Compile Include="cms\admin\KhachHang\KhachHangLoadControl.ascx.designer.cs">
+      <DependentUpon>KhachHangLoadControl.ascx</DependentUpon>
     </Compile>
-    <Compile Include="Global.asax.cs">
-      <DependentUpon>Global.asax</DependentUpon>
+    <Compile Include="cms\admin\Menu\MenuLoadControl.ascx.cs">
+      <DependentUpon>MenuLoadControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\admin\Menu\MenuLoadControl.ascx.designer.cs">
+      <DependentUpon>MenuLoadControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\admin\QuangCao\QuangCaoLoadControl.ascx.cs">
+      <DependentUpon>QuangCaoLoadControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\admin\QuangCao\QuangCaoLoadControl.ascx.designer.cs">
+      <DependentUpon>QuangCaoLoadControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\admin\QuangCao\QuanLyDanhSachQuangCao\DanhSachQuangCaoLoadControl.ascx.cs">
+      <DependentUpon>DanhSachQuangCaoLoadControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\admin\QuangCao\QuanLyDanhSachQuangCao\DanhSachQuangCaoLoadControl.ascx.designer.cs">
+      <DependentUpon>DanhSachQuangCaoLoadControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\admin\QuangCao\QuanLyNhomQuangCao\NhomQuangCaoLoadControl.ascx.cs">
+      <DependentUpon>NhomQuangCaoLoadControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\admin\QuangCao\QuanLyNhomQuangCao\NhomQuangCaoLoadControl.ascx.designer.cs">
+      <DependentUpon>NhomQuangCaoLoadControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\admin\SanPham\QuanLyChatLieu\ChatLieuLoadControl.ascx.cs">
+      <DependentUpon>ChatLieuLoadControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\admin\SanPham\QuanLyChatLieu\ChatLieuLoadControl.ascx.designer.cs">
+      <DependentUpon>ChatLieuLoadControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\admin\SanPham\QuanLyDanhMuc\DanhMucLoadControl.ascx.cs">
+      <DependentUpon>DanhMucLoadControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\admin\SanPham\QuanLyDanhMuc\DanhMucLoadControl.ascx.designer.cs">
+      <DependentUpon>DanhMucLoadControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\admin\SanPham\QuanLyDonHang\DonHangLoadControl.ascx.cs">
+      <DependentUpon>DonHangLoadControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\admin\SanPham\QuanLyDonHang\DonHangLoadControl.ascx.designer.cs">
+      <DependentUpon>DonHangLoadControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\admin\SanPham\QuanLyMau\MauLoadControl.ascx.cs">
+      <DependentUpon>MauLoadControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\admin\SanPham\QuanLyMau\MauLoadControl.ascx.designer.cs">
+      <DependentUpon>MauLoadControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\admin\SanPham\QuanLyNhomSanPham\NhomLoadControl.ascx.cs">
+      <DependentUpon>NhomLoadControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\admin\SanPham\QuanLyNhomSanPham\NhomLoadControl.ascx.designer.cs">
+      <DependentUpon>NhomLoadControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\admin\SanPham\QuanLyPhienDauGia\PhienDauGiaLoadControl.ascx.cs">
+      <DependentUpon>PhienDauGiaLoadControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\admin\SanPham\QuanLyPhienDauGia\PhienDauGiaLoadControl.ascx.designer.cs">
+      <DependentUpon>PhienDauGiaLoadControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\admin\SanPham\QuanLySanPham\SanPhamLoadControl.ascx.cs">
+      <DependentUpon>SanPhamLoadControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\admin\SanPham\QuanLySanPham\SanPhamLoadControl.ascx.designer.cs">
+      <DependentUpon>SanPhamLoadControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\admin\SanPham\QuanLySize\SizeLoadControl.ascx.cs">
+      <DependentUpon>SizeLoadControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\admin\SanPham\QuanLySize\SizeLoadControl.ascx.designer.cs">
+      <DependentUpon>SizeLoadControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\admin\SanPham\SanPhamLoadControl.ascx.cs">
+      <DependentUpon>SanPhamLoadControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\admin\SanPham\SanPhamLoadControl.ascx.designer.cs">
+      <DependentUpon>SanPhamLoadControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\admin\TaiKhoan\TaiKhoanLoadControl.ascx.cs">
+      <DependentUpon>TaiKhoanLoadControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\admin\TaiKhoan\TaiKhoanLoadControl.ascx.designer.cs">
+      <DependentUpon>TaiKhoanLoadControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\admin\TinTuc\DanhMucTin\DanhMucTinLoadControl.ascx.cs">
+      <DependentUpon>DanhMucTinLoadControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\admin\TinTuc\DanhMucTin\DanhMucTinLoadControl.ascx.designer.cs">
+      <DependentUpon>DanhMucTinLoadControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\admin\TinTuc\DanhSachTinTuc\DanhSachTinTucLoadControl.ascx.cs">
+      <DependentUpon>DanhSachTinTucLoadControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\admin\TinTuc\DanhSachTinTuc\DanhSachTinTucLoadControl.ascx.designer.cs">
+      <DependentUpon>DanhSachTinTucLoadControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\admin\TinTuc\TinTucLoadControl.ascx.cs">
+      <DependentUpon>TinTucLoadControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\admin\TinTuc\TinTucLoadControl.ascx.designer.cs">
+      <DependentUpon>TinTucLoadControl.ascx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Site.Master.cs">
-      <DependentUpon>Site.Master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Site.Master.designer.cs">
-      <DependentUpon>Site.Master</DependentUpon>
-    </Compile>
-    <Compile Include="Site.Mobile.Master.cs">
-      <DependentUpon>Site.Mobile.Master</DependentUpon>
-    </Compile>
-    <Compile Include="Site.Mobile.Master.designer.cs">
-      <DependentUpon>Site.Mobile.Master</DependentUpon>
-    </Compile>
-    <Compile Include="ViewSwitcher.ascx.cs">
-      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
-    </Compile>
-    <Compile Include="ViewSwitcher.ascx.designer.cs">
-      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
+    <Folder Include="cms\display\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
-    <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
-    <Content Include="Scripts\jquery-3.4.1.min.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

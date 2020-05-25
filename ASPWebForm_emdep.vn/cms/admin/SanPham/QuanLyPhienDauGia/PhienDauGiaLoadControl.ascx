@@ -1,0 +1,2 @@
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="PhienDauGiaLoadControl.ascx.cs" Inherits="ASPWebForm_emdep.vn.cms.admin.SanPham.QuanLyPhienDauGia.PhienDauGiaLoadControl" %>
+Quản lý phiếu đấu giá
