@@ -13,5 +13,17 @@ namespace ASPWebForm_emdep.vn
         {
 
         }
+        protected string DanhDau(string tenModul)
+        {
+            string s = "";
+
+            string modul = ""; //Biến lưu giá trị của querstring modul
+            if (Request.QueryString["modul"] != null)
+                modul = Request.QueryString["modul"];
+            if (tenModul == modul)
+                s = "current";
+
+            return s;
+        }
     }
 }

@@ -1,2 +1,2 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="DanhSachTinTucLoadControl.ascx.cs" Inherits="ASPWebForm_emdep.vn.cms.admin.TinTuc.DanhSachTinTuc.DanhSachTinTucLoadControl" %>
-Danh sách tin tức
+<asp:PlaceHolder ID="plLoadControl" runat="server"></asp:PlaceHolder>

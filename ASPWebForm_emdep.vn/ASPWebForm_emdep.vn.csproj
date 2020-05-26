@@ -109,22 +109,52 @@
     <Content Include="cms\admin\AdminLoadControl.ascx" />
     <Content Include="cms\admin\css\cssAdmin.css" />
     <Content Include="cms\admin\KhachHang\KhachHangLoadControl.ascx" />
+    <Content Include="cms\admin\KhachHang\KhachHang_HienThi.ascx" />
     <Content Include="cms\admin\Menu\MenuLoadControl.ascx" />
+    <Content Include="cms\admin\Menu\Menu_HienThi.ascx" />
+    <Content Include="cms\admin\Menu\Menu_ThemMoi.ascx" />
     <Content Include="cms\admin\QuangCao\QuangCaoLoadControl.ascx" />
     <Content Include="cms\admin\QuangCao\QuanLyDanhSachQuangCao\DanhSachQuangCaoLoadControl.ascx" />
+    <Content Include="cms\admin\QuangCao\QuanLyDanhSachQuangCao\DanhSachQuangCao_HienThi.ascx" />
+    <Content Include="cms\admin\QuangCao\QuanLyDanhSachQuangCao\DanhSachQuangCao_ThemMoi.ascx" />
     <Content Include="cms\admin\QuangCao\QuanLyNhomQuangCao\NhomQuangCaoLoadControl.ascx" />
+    <Content Include="cms\admin\QuangCao\QuanLyNhomQuangCao\NhomQuangCao_HienThi.ascx" />
+    <Content Include="cms\admin\QuangCao\QuanLyNhomQuangCao\NhomQuangCao_ThemMoi.ascx" />
     <Content Include="cms\admin\SanPham\QuanLyChatLieu\ChatLieuLoadControl.ascx" />
+    <Content Include="cms\admin\SanPham\QuanLyChatLieu\ChatLieu_HienThi.ascx" />
+    <Content Include="cms\admin\SanPham\QuanLyChatLieu\ChatLieu_ThemMoi.ascx" />
     <Content Include="cms\admin\SanPham\QuanLyDanhMuc\DanhMucLoadControl.ascx" />
+    <Content Include="cms\admin\SanPham\QuanLyDanhMuc\DanhMuc_HienThi.ascx" />
+    <Content Include="cms\admin\SanPham\QuanLyDanhMuc\DanhMuc_ThemMoi.ascx" />
+    <Content Include="cms\admin\SanPham\QuanLyDonHang\ChiTietDonHang.aspx" />
     <Content Include="cms\admin\SanPham\QuanLyDonHang\DonHangLoadControl.ascx" />
+    <Content Include="cms\admin\SanPham\QuanLyDonHang\DonHang_HienThi.ascx" />
     <Content Include="cms\admin\SanPham\QuanLyMau\MauLoadControl.ascx" />
+    <Content Include="cms\admin\SanPham\QuanLyMau\Mau_HienThi.ascx" />
+    <Content Include="cms\admin\SanPham\QuanLyMau\Mau_ThemMoi.ascx" />
     <Content Include="cms\admin\SanPham\QuanLyNhomSanPham\NhomLoadControl.ascx" />
+    <Content Include="cms\admin\SanPham\QuanLyNhomSanPham\NhomSanPham_HienThi.ascx" />
+    <Content Include="cms\admin\SanPham\QuanLyNhomSanPham\NhomSanPham_ThemMoi.ascx" />
     <Content Include="cms\admin\SanPham\QuanLyPhienDauGia\PhienDauGiaLoadControl.ascx" />
+    <Content Include="cms\admin\SanPham\QuanLyPhienDauGia\PhienDauGia_ChiTiet.ascx" />
+    <Content Include="cms\admin\SanPham\QuanLyPhienDauGia\PhienDauGia_HienThi.ascx" />
+    <Content Include="cms\admin\SanPham\QuanLyPhienDauGia\PhienDauGia_ThemMoi.ascx" />
     <Content Include="cms\admin\SanPham\QuanLySanPham\SanPhamLoadControl.ascx" />
+    <Content Include="cms\admin\SanPham\QuanLySanPham\SanPham_HienThi.ascx" />
+    <Content Include="cms\admin\SanPham\QuanLySanPham\SanPham_ThemMoi.ascx" />
     <Content Include="cms\admin\SanPham\QuanLySize\SizeLoadControl.ascx" />
+    <Content Include="cms\admin\SanPham\QuanLySize\Size_HienThi.ascx" />
+    <Content Include="cms\admin\SanPham\QuanLySize\Size_ThemMoi.ascx" />
     <Content Include="cms\admin\SanPham\SanPhamLoadControl.ascx" />
     <Content Include="cms\admin\TaiKhoan\TaiKhoanLoadControl.ascx" />
+    <Content Include="cms\admin\TaiKhoan\TaiKhoan_HienThi.ascx" />
+    <Content Include="cms\admin\TaiKhoan\TaiKhoan_ThemMoi.ascx" />
     <Content Include="cms\admin\TinTuc\DanhMucTin\DanhMucTinLoadControl.ascx" />
+    <Content Include="cms\admin\TinTuc\DanhMucTin\DanhMucTin_HienThi.ascx" />
+    <Content Include="cms\admin\TinTuc\DanhMucTin\DanhMucTin_ThemMoi.ascx" />
     <Content Include="cms\admin\TinTuc\DanhSachTinTuc\DanhSachTinTucLoadControl.ascx" />
+    <Content Include="cms\admin\TinTuc\DanhSachTinTuc\DanhSachTinTuc_HienThi.ascx" />
+    <Content Include="cms\admin\TinTuc\DanhSachTinTuc\DanhSachTinTuc_ThemMoi.ascx" />
     <Content Include="cms\admin\TinTuc\TinTucLoadControl.ascx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -172,12 +202,33 @@
     <Compile Include="cms\admin\KhachHang\KhachHangLoadControl.ascx.designer.cs">
       <DependentUpon>KhachHangLoadControl.ascx</DependentUpon>
     </Compile>
+    <Compile Include="cms\admin\KhachHang\KhachHang_HienThi.ascx.cs">
+      <DependentUpon>KhachHang_HienThi.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\admin\KhachHang\KhachHang_HienThi.ascx.designer.cs">
+      <DependentUpon>KhachHang_HienThi.ascx</DependentUpon>
+    </Compile>
     <Compile Include="cms\admin\Menu\MenuLoadControl.ascx.cs">
       <DependentUpon>MenuLoadControl.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="cms\admin\Menu\MenuLoadControl.ascx.designer.cs">
       <DependentUpon>MenuLoadControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\admin\Menu\Menu_HienThi.ascx.cs">
+      <DependentUpon>Menu_HienThi.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\admin\Menu\Menu_HienThi.ascx.designer.cs">
+      <DependentUpon>Menu_HienThi.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\admin\Menu\Menu_ThemMoi.ascx.cs">
+      <DependentUpon>Menu_ThemMoi.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\admin\Menu\Menu_ThemMoi.ascx.designer.cs">
+      <DependentUpon>Menu_ThemMoi.ascx</DependentUpon>
     </Compile>
     <Compile Include="cms\admin\QuangCao\QuangCaoLoadControl.ascx.cs">
       <DependentUpon>QuangCaoLoadControl.ascx</DependentUpon>
@@ -193,12 +244,40 @@
     <Compile Include="cms\admin\QuangCao\QuanLyDanhSachQuangCao\DanhSachQuangCaoLoadControl.ascx.designer.cs">
       <DependentUpon>DanhSachQuangCaoLoadControl.ascx</DependentUpon>
     </Compile>
+    <Compile Include="cms\admin\QuangCao\QuanLyDanhSachQuangCao\DanhSachQuangCao_HienThi.ascx.cs">
+      <DependentUpon>DanhSachQuangCao_HienThi.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\admin\QuangCao\QuanLyDanhSachQuangCao\DanhSachQuangCao_HienThi.ascx.designer.cs">
+      <DependentUpon>DanhSachQuangCao_HienThi.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\admin\QuangCao\QuanLyDanhSachQuangCao\DanhSachQuangCao_ThemMoi.ascx.cs">
+      <DependentUpon>DanhSachQuangCao_ThemMoi.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\admin\QuangCao\QuanLyDanhSachQuangCao\DanhSachQuangCao_ThemMoi.ascx.designer.cs">
+      <DependentUpon>DanhSachQuangCao_ThemMoi.ascx</DependentUpon>
+    </Compile>
     <Compile Include="cms\admin\QuangCao\QuanLyNhomQuangCao\NhomQuangCaoLoadControl.ascx.cs">
       <DependentUpon>NhomQuangCaoLoadControl.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="cms\admin\QuangCao\QuanLyNhomQuangCao\NhomQuangCaoLoadControl.ascx.designer.cs">
       <DependentUpon>NhomQuangCaoLoadControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\admin\QuangCao\QuanLyNhomQuangCao\NhomQuangCao_HienThi.ascx.cs">
+      <DependentUpon>NhomQuangCao_HienThi.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\admin\QuangCao\QuanLyNhomQuangCao\NhomQuangCao_HienThi.ascx.designer.cs">
+      <DependentUpon>NhomQuangCao_HienThi.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\admin\QuangCao\QuanLyNhomQuangCao\NhomQuangCao_ThemMoi.ascx.cs">
+      <DependentUpon>NhomQuangCao_ThemMoi.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\admin\QuangCao\QuanLyNhomQuangCao\NhomQuangCao_ThemMoi.ascx.designer.cs">
+      <DependentUpon>NhomQuangCao_ThemMoi.ascx</DependentUpon>
     </Compile>
     <Compile Include="cms\admin\SanPham\QuanLyChatLieu\ChatLieuLoadControl.ascx.cs">
       <DependentUpon>ChatLieuLoadControl.ascx</DependentUpon>
@@ -207,12 +286,47 @@
     <Compile Include="cms\admin\SanPham\QuanLyChatLieu\ChatLieuLoadControl.ascx.designer.cs">
       <DependentUpon>ChatLieuLoadControl.ascx</DependentUpon>
     </Compile>
+    <Compile Include="cms\admin\SanPham\QuanLyChatLieu\ChatLieu_HienThi.ascx.cs">
+      <DependentUpon>ChatLieu_HienThi.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\admin\SanPham\QuanLyChatLieu\ChatLieu_HienThi.ascx.designer.cs">
+      <DependentUpon>ChatLieu_HienThi.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\admin\SanPham\QuanLyChatLieu\ChatLieu_ThemMoi.ascx.cs">
+      <DependentUpon>ChatLieu_ThemMoi.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\admin\SanPham\QuanLyChatLieu\ChatLieu_ThemMoi.ascx.designer.cs">
+      <DependentUpon>ChatLieu_ThemMoi.ascx</DependentUpon>
+    </Compile>
     <Compile Include="cms\admin\SanPham\QuanLyDanhMuc\DanhMucLoadControl.ascx.cs">
       <DependentUpon>DanhMucLoadControl.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="cms\admin\SanPham\QuanLyDanhMuc\DanhMucLoadControl.ascx.designer.cs">
       <DependentUpon>DanhMucLoadControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\admin\SanPham\QuanLyDanhMuc\DanhMuc_HienThi.ascx.cs">
+      <DependentUpon>DanhMuc_HienThi.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\admin\SanPham\QuanLyDanhMuc\DanhMuc_HienThi.ascx.designer.cs">
+      <DependentUpon>DanhMuc_HienThi.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\admin\SanPham\QuanLyDanhMuc\DanhMuc_ThemMoi.ascx.cs">
+      <DependentUpon>DanhMuc_ThemMoi.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\admin\SanPham\QuanLyDanhMuc\DanhMuc_ThemMoi.ascx.designer.cs">
+      <DependentUpon>DanhMuc_ThemMoi.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\admin\SanPham\QuanLyDonHang\ChiTietDonHang.aspx.cs">
+      <DependentUpon>ChiTietDonHang.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\admin\SanPham\QuanLyDonHang\ChiTietDonHang.aspx.designer.cs">
+      <DependentUpon>ChiTietDonHang.aspx</DependentUpon>
     </Compile>
     <Compile Include="cms\admin\SanPham\QuanLyDonHang\DonHangLoadControl.ascx.cs">
       <DependentUpon>DonHangLoadControl.ascx</DependentUpon>
@@ -221,12 +335,33 @@
     <Compile Include="cms\admin\SanPham\QuanLyDonHang\DonHangLoadControl.ascx.designer.cs">
       <DependentUpon>DonHangLoadControl.ascx</DependentUpon>
     </Compile>
+    <Compile Include="cms\admin\SanPham\QuanLyDonHang\DonHang_HienThi.ascx.cs">
+      <DependentUpon>DonHang_HienThi.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\admin\SanPham\QuanLyDonHang\DonHang_HienThi.ascx.designer.cs">
+      <DependentUpon>DonHang_HienThi.ascx</DependentUpon>
+    </Compile>
     <Compile Include="cms\admin\SanPham\QuanLyMau\MauLoadControl.ascx.cs">
       <DependentUpon>MauLoadControl.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="cms\admin\SanPham\QuanLyMau\MauLoadControl.ascx.designer.cs">
       <DependentUpon>MauLoadControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\admin\SanPham\QuanLyMau\Mau_HienThi.ascx.cs">
+      <DependentUpon>Mau_HienThi.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\admin\SanPham\QuanLyMau\Mau_HienThi.ascx.designer.cs">
+      <DependentUpon>Mau_HienThi.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\admin\SanPham\QuanLyMau\Mau_ThemMoi.ascx.cs">
+      <DependentUpon>Mau_ThemMoi.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\admin\SanPham\QuanLyMau\Mau_ThemMoi.ascx.designer.cs">
+      <DependentUpon>Mau_ThemMoi.ascx</DependentUpon>
     </Compile>
     <Compile Include="cms\admin\SanPham\QuanLyNhomSanPham\NhomLoadControl.ascx.cs">
       <DependentUpon>NhomLoadControl.ascx</DependentUpon>
@@ -235,12 +370,47 @@
     <Compile Include="cms\admin\SanPham\QuanLyNhomSanPham\NhomLoadControl.ascx.designer.cs">
       <DependentUpon>NhomLoadControl.ascx</DependentUpon>
     </Compile>
+    <Compile Include="cms\admin\SanPham\QuanLyNhomSanPham\NhomSanPham_HienThi.ascx.cs">
+      <DependentUpon>NhomSanPham_HienThi.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\admin\SanPham\QuanLyNhomSanPham\NhomSanPham_HienThi.ascx.designer.cs">
+      <DependentUpon>NhomSanPham_HienThi.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\admin\SanPham\QuanLyNhomSanPham\NhomSanPham_ThemMoi.ascx.cs">
+      <DependentUpon>NhomSanPham_ThemMoi.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\admin\SanPham\QuanLyNhomSanPham\NhomSanPham_ThemMoi.ascx.designer.cs">
+      <DependentUpon>NhomSanPham_ThemMoi.ascx</DependentUpon>
+    </Compile>
     <Compile Include="cms\admin\SanPham\QuanLyPhienDauGia\PhienDauGiaLoadControl.ascx.cs">
       <DependentUpon>PhienDauGiaLoadControl.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="cms\admin\SanPham\QuanLyPhienDauGia\PhienDauGiaLoadControl.ascx.designer.cs">
       <DependentUpon>PhienDauGiaLoadControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\admin\SanPham\QuanLyPhienDauGia\PhienDauGia_ChiTiet.ascx.cs">
+      <DependentUpon>PhienDauGia_ChiTiet.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\admin\SanPham\QuanLyPhienDauGia\PhienDauGia_ChiTiet.ascx.designer.cs">
+      <DependentUpon>PhienDauGia_ChiTiet.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\admin\SanPham\QuanLyPhienDauGia\PhienDauGia_HienThi.ascx.cs">
+      <DependentUpon>PhienDauGia_HienThi.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\admin\SanPham\QuanLyPhienDauGia\PhienDauGia_HienThi.ascx.designer.cs">
+      <DependentUpon>PhienDauGia_HienThi.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\admin\SanPham\QuanLyPhienDauGia\PhienDauGia_ThemMoi.ascx.cs">
+      <DependentUpon>PhienDauGia_ThemMoi.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\admin\SanPham\QuanLyPhienDauGia\PhienDauGia_ThemMoi.ascx.designer.cs">
+      <DependentUpon>PhienDauGia_ThemMoi.ascx</DependentUpon>
     </Compile>
     <Compile Include="cms\admin\SanPham\QuanLySanPham\SanPhamLoadControl.ascx.cs">
       <DependentUpon>SanPhamLoadControl.ascx</DependentUpon>
@@ -249,12 +419,40 @@
     <Compile Include="cms\admin\SanPham\QuanLySanPham\SanPhamLoadControl.ascx.designer.cs">
       <DependentUpon>SanPhamLoadControl.ascx</DependentUpon>
     </Compile>
+    <Compile Include="cms\admin\SanPham\QuanLySanPham\SanPham_HienThi.ascx.cs">
+      <DependentUpon>SanPham_HienThi.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\admin\SanPham\QuanLySanPham\SanPham_HienThi.ascx.designer.cs">
+      <DependentUpon>SanPham_HienThi.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\admin\SanPham\QuanLySanPham\SanPham_ThemMoi.ascx.cs">
+      <DependentUpon>SanPham_ThemMoi.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\admin\SanPham\QuanLySanPham\SanPham_ThemMoi.ascx.designer.cs">
+      <DependentUpon>SanPham_ThemMoi.ascx</DependentUpon>
+    </Compile>
     <Compile Include="cms\admin\SanPham\QuanLySize\SizeLoadControl.ascx.cs">
       <DependentUpon>SizeLoadControl.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="cms\admin\SanPham\QuanLySize\SizeLoadControl.ascx.designer.cs">
       <DependentUpon>SizeLoadControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\admin\SanPham\QuanLySize\Size_HienThi.ascx.cs">
+      <DependentUpon>Size_HienThi.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\admin\SanPham\QuanLySize\Size_HienThi.ascx.designer.cs">
+      <DependentUpon>Size_HienThi.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\admin\SanPham\QuanLySize\Size_ThemMoi.ascx.cs">
+      <DependentUpon>Size_ThemMoi.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\admin\SanPham\QuanLySize\Size_ThemMoi.ascx.designer.cs">
+      <DependentUpon>Size_ThemMoi.ascx</DependentUpon>
     </Compile>
     <Compile Include="cms\admin\SanPham\SanPhamLoadControl.ascx.cs">
       <DependentUpon>SanPhamLoadControl.ascx</DependentUpon>
@@ -270,6 +468,20 @@
     <Compile Include="cms\admin\TaiKhoan\TaiKhoanLoadControl.ascx.designer.cs">
       <DependentUpon>TaiKhoanLoadControl.ascx</DependentUpon>
     </Compile>
+    <Compile Include="cms\admin\TaiKhoan\TaiKhoan_HienThi.ascx.cs">
+      <DependentUpon>TaiKhoan_HienThi.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\admin\TaiKhoan\TaiKhoan_HienThi.ascx.designer.cs">
+      <DependentUpon>TaiKhoan_HienThi.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\admin\TaiKhoan\TaiKhoan_ThemMoi.ascx.cs">
+      <DependentUpon>TaiKhoan_ThemMoi.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\admin\TaiKhoan\TaiKhoan_ThemMoi.ascx.designer.cs">
+      <DependentUpon>TaiKhoan_ThemMoi.ascx</DependentUpon>
+    </Compile>
     <Compile Include="cms\admin\TinTuc\DanhMucTin\DanhMucTinLoadControl.ascx.cs">
       <DependentUpon>DanhMucTinLoadControl.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -277,12 +489,40 @@
     <Compile Include="cms\admin\TinTuc\DanhMucTin\DanhMucTinLoadControl.ascx.designer.cs">
       <DependentUpon>DanhMucTinLoadControl.ascx</DependentUpon>
     </Compile>
+    <Compile Include="cms\admin\TinTuc\DanhMucTin\DanhMucTin_HienThi.ascx.cs">
+      <DependentUpon>DanhMucTin_HienThi.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\admin\TinTuc\DanhMucTin\DanhMucTin_HienThi.ascx.designer.cs">
+      <DependentUpon>DanhMucTin_HienThi.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\admin\TinTuc\DanhMucTin\DanhMucTin_ThemMoi.ascx.cs">
+      <DependentUpon>DanhMucTin_ThemMoi.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\admin\TinTuc\DanhMucTin\DanhMucTin_ThemMoi.ascx.designer.cs">
+      <DependentUpon>DanhMucTin_ThemMoi.ascx</DependentUpon>
+    </Compile>
     <Compile Include="cms\admin\TinTuc\DanhSachTinTuc\DanhSachTinTucLoadControl.ascx.cs">
       <DependentUpon>DanhSachTinTucLoadControl.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="cms\admin\TinTuc\DanhSachTinTuc\DanhSachTinTucLoadControl.ascx.designer.cs">
       <DependentUpon>DanhSachTinTucLoadControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\admin\TinTuc\DanhSachTinTuc\DanhSachTinTuc_HienThi.ascx.cs">
+      <DependentUpon>DanhSachTinTuc_HienThi.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\admin\TinTuc\DanhSachTinTuc\DanhSachTinTuc_HienThi.ascx.designer.cs">
+      <DependentUpon>DanhSachTinTuc_HienThi.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\admin\TinTuc\DanhSachTinTuc\DanhSachTinTuc_ThemMoi.ascx.cs">
+      <DependentUpon>DanhSachTinTuc_ThemMoi.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\admin\TinTuc\DanhSachTinTuc\DanhSachTinTuc_ThemMoi.ascx.designer.cs">
+      <DependentUpon>DanhSachTinTuc_ThemMoi.ascx</DependentUpon>
     </Compile>
     <Compile Include="cms\admin\TinTuc\TinTucLoadControl.ascx.cs">
       <DependentUpon>TinTucLoadControl.ascx</DependentUpon>
