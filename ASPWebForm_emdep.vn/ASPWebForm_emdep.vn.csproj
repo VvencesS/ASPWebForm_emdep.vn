@@ -156,15 +156,16 @@
     <Content Include="cms\admin\TinTuc\DanhSachTinTuc\DanhSachTinTuc_HienThi.ascx" />
     <Content Include="cms\admin\TinTuc\DanhSachTinTuc\DanhSachTinTuc_ThemMoi.ascx" />
     <Content Include="cms\admin\TinTuc\TinTucLoadControl.ascx" />
+    <Content Include="Global.asax" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Code\Database\SQLDatabase.cs" />
+    <Compile Include="App_Code\Database\SQLDatabase.cs" />
     <Content Include="App_Code\Database\ChatLieu.cs" />
     <Content Include="App_Code\Database\ChiTietDonDatHang.cs" />
     <Content Include="App_Code\Database\ChiTietDonHang.cs" />
     <Content Include="App_Code\Database\DangKy.cs" />
-    <Content Include="App_Code\Database\DanhMuc.cs" />
+    <Compile Include="App_Code\Database\DanhMuc.cs" />
     <Content Include="App_Code\Database\DanhMucTin.cs" />
     <Content Include="App_Code\Database\DonDatHang.cs" />
     <Content Include="App_Code\Database\HoaDon.cs" />
@@ -188,6 +189,7 @@
     <Compile Include="Admin.aspx.designer.cs">
       <DependentUpon>Admin.aspx</DependentUpon>
     </Compile>
+    <Content Include="App_Code\Database\Global.cs" />
     <Compile Include="cms\admin\AdminLoadControl.ascx.cs">
       <DependentUpon>AdminLoadControl.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -531,10 +533,14 @@
     <Compile Include="cms\admin\TinTuc\TinTucLoadControl.ascx.designer.cs">
       <DependentUpon>TinTucLoadControl.ascx</DependentUpon>
     </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="cms\display\" />
+    <Folder Include="pic\SanPham\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Web.Debug.config">
