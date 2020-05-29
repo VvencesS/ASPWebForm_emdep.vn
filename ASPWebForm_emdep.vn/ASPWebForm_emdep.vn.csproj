@@ -128,6 +128,7 @@
     <Content Include="cms\admin\QuangCao\QuanLyNhomQuangCao\NhomQuangCaoLoadControl.ascx" />
     <Content Include="cms\admin\QuangCao\QuanLyNhomQuangCao\NhomQuangCao_HienThi.ascx" />
     <Content Include="cms\admin\QuangCao\QuanLyNhomQuangCao\NhomQuangCao_ThemMoi.ascx" />
+    <Content Include="cms\admin\SanPham\QuanLyChatLieu\Ajax\ChatLieu.aspx" />
     <Content Include="cms\admin\SanPham\QuanLyChatLieu\ChatLieuLoadControl.ascx" />
     <Content Include="cms\admin\SanPham\QuanLyChatLieu\ChatLieu_HienThi.ascx" />
     <Content Include="cms\admin\SanPham\QuanLyChatLieu\ChatLieu_ThemMoi.ascx" />
@@ -171,7 +172,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Code\Database\SQLDatabase.cs" />
-    <Content Include="App_Code\Database\ChatLieu.cs" />
+    <Compile Include="App_Code\Database\ChatLieu.cs" />
     <Content Include="App_Code\Database\ChiTietDonDatHang.cs" />
     <Content Include="App_Code\Database\ChiTietDonHang.cs" />
     <Content Include="App_Code\Database\DangKy.cs" />
@@ -290,6 +291,13 @@
     </Compile>
     <Compile Include="cms\admin\QuangCao\QuanLyNhomQuangCao\NhomQuangCao_ThemMoi.ascx.designer.cs">
       <DependentUpon>NhomQuangCao_ThemMoi.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\admin\SanPham\QuanLyChatLieu\Ajax\ChatLieu.aspx.cs">
+      <DependentUpon>ChatLieu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\admin\SanPham\QuanLyChatLieu\Ajax\ChatLieu.aspx.designer.cs">
+      <DependentUpon>ChatLieu.aspx</DependentUpon>
     </Compile>
     <Compile Include="cms\admin\SanPham\QuanLyChatLieu\ChatLieuLoadControl.ascx.cs">
       <DependentUpon>ChatLieuLoadControl.ascx</DependentUpon>
