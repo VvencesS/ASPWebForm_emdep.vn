@@ -16,3 +16,28 @@
        <asp:Literal ID="ltrDanhMuc" runat="server"></asp:Literal>
    </table>
 </div>
+<script type="text/javascript">
+    function XoaDanhMuc(MaDM)
+    {
+        if(confirm("Bạn chắc chắn muốn xóa danh mục này"))
+        {
+            //Viết code xóa danh mục tại đây
+
+            $.post("cms/admin/SanPham/QuanLyDanhMuc/Ajax/DanhMuc.aspx",
+                {
+                    "ThaoTac":"XoaDanhMuc",
+                    "MaDM": MaDM
+                },
+                function (data, status)
+                {
+                    //alert("Data :" + data + "\n Status :" + status);
+                    if(data==1)
+                    {
+                        //thực hiện thành công => ẩn dòng vừa xóa đi
+                        $("#maDong_" + MaDM).slideUp();
+
+                    }
+                });
+        }
+    }
+</script>

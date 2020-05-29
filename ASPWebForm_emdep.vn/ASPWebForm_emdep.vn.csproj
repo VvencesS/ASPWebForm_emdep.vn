@@ -115,6 +115,7 @@
     <Content Include="cms\admin\css\expend.jpg" />
     <Content Include="cms\admin\css\unCheck.jpg" />
     <Content Include="cms\admin\css\view.png" />
+    <Content Include="cms\admin\js\jquery-3.1.1.min.js" />
     <Content Include="cms\admin\KhachHang\KhachHangLoadControl.ascx" />
     <Content Include="cms\admin\KhachHang\KhachHang_HienThi.ascx" />
     <Content Include="cms\admin\Menu\MenuLoadControl.ascx" />
@@ -130,6 +131,7 @@
     <Content Include="cms\admin\SanPham\QuanLyChatLieu\ChatLieuLoadControl.ascx" />
     <Content Include="cms\admin\SanPham\QuanLyChatLieu\ChatLieu_HienThi.ascx" />
     <Content Include="cms\admin\SanPham\QuanLyChatLieu\ChatLieu_ThemMoi.ascx" />
+    <Content Include="cms\admin\SanPham\QuanLyDanhMuc\Ajax\DanhMuc.aspx" />
     <Content Include="cms\admin\SanPham\QuanLyDanhMuc\DanhMucLoadControl.ascx" />
     <Content Include="cms\admin\SanPham\QuanLyDanhMuc\DanhMuc_HienThi.ascx" />
     <Content Include="cms\admin\SanPham\QuanLyDanhMuc\DanhMuc_ThemMoi.ascx" />
@@ -308,6 +310,13 @@
     </Compile>
     <Compile Include="cms\admin\SanPham\QuanLyChatLieu\ChatLieu_ThemMoi.ascx.designer.cs">
       <DependentUpon>ChatLieu_ThemMoi.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\admin\SanPham\QuanLyDanhMuc\Ajax\DanhMuc.aspx.cs">
+      <DependentUpon>DanhMuc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\admin\SanPham\QuanLyDanhMuc\Ajax\DanhMuc.aspx.designer.cs">
+      <DependentUpon>DanhMuc.aspx</DependentUpon>
     </Compile>
     <Compile Include="cms\admin\SanPham\QuanLyDanhMuc\DanhMucLoadControl.ascx.cs">
       <DependentUpon>DanhMucLoadControl.ascx</DependentUpon>

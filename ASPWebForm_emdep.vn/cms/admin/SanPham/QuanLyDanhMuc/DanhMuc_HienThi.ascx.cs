@@ -22,7 +22,7 @@ namespace ASPWebForm_emdep.vn.cms.admin.SanPham.QuanLyDanhMuc
             for (int i = 0; i < dt.Rows.Count; i++)
             {
                 ltrDanhMuc.Text += @"
-                <tr>
+                <tr id='maDong_" + dt.Rows[i]["MaDM"] + @"'>
                     <td class='cotMa'>" + dt.Rows[i]["MaDM"] + @"</td>
                     <td class='cotTen'>" + dt.Rows[i]["TenDM"] + @"</td>
                     <td class='cotAnh'>
@@ -33,7 +33,7 @@ namespace ASPWebForm_emdep.vn.cms.admin.SanPham.QuanLyDanhMuc
                     <td class='cotCongCu'>
                         <a href='#' class='dmcon' title='Xem danh mục con'></a>
                         <a href='Admin.aspx?modul=SanPham&modulphu=DanhMuc&thaotac=ChinhSua&id=" + dt.Rows[i]["MaDM"] + @"' class='sua' title='Sửa'></a>
-                        <a href='#' class='xoa' title='Xóa'></a>
+                        <a href='javascript:XoaDanhMuc(" + dt.Rows[i]["MaDM"] + @")' class='xoa' title='Xóa'></a>
                     </td>
                 </tr>
                 ";

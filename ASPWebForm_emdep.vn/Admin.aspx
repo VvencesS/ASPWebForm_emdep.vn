@@ -43,5 +43,7 @@
             <uc1:AdminLoadControl runat="server" id="AdminLoadControl" />
         </div>
     </form>
+
+    <script src="cms/admin/js/jquery-3.1.1.min.js"></script>
 </body>
 </html>
