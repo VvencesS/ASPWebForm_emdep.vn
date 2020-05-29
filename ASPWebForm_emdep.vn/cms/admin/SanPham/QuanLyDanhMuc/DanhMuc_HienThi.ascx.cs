@@ -10,15 +10,18 @@ namespace ASPWebForm_emdep.vn.cms.admin.SanPham.QuanLyDanhMuc
 {
     public partial class DanhMuc_HienThi : System.Web.UI.UserControl
     {
+        string madmcha = "0";
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Request.QueryString["madmcha"] != null)
+                madmcha = Request.QueryString["madmcha"];
             if (!IsPostBack)
                 LayDanhMuc();
         }
         private void LayDanhMuc()
         {
             DataTable dt = new DataTable();
-            dt = ASPWebForm_emdep.vn.App_Code.Database.DanhMuc.Thongtin_Danhmuc();
+            dt = ASPWebForm_emdep.vn.App_Code.Database.DanhMuc.Thongtin_Danhmuc_by_MaDMCha(madmcha);
             for (int i = 0; i < dt.Rows.Count; i++)
             {
                 ltrDanhMuc.Text += @"
@@ -30,8 +33,10 @@ namespace ASPWebForm_emdep.vn.cms.admin.SanPham.QuanLyDanhMuc
                         <img class='anhDaiDienHover'src='/pic/SanPham/" + dt.Rows[i]["AnhDaiDien"] + @"'/>
                     </td>
                     <td class='cotThuTu'>" + dt.Rows[i]["ThuTu"] + @"</td>
-                    <td class='cotCongCu'>
-                        <a href='#' class='dmcon' title='Xem danh mục con'></a>
+                    <td class='cotCongCu'>";
+                        if (CoDanhMucCon(dt.Rows[i]["MaDM"].ToString()))
+                            ltrDanhMuc.Text += @"<a href='Admin.aspx?modul=SanPham&modulphu=DanhMuc&madmcha=" + dt.Rows[i]["MaDM"] + @"' class='dmcon' title='Xem danh mục con'></a>";
+                        ltrDanhMuc.Text += @"
                         <a href='Admin.aspx?modul=SanPham&modulphu=DanhMuc&thaotac=ChinhSua&id=" + dt.Rows[i]["MaDM"] + @"' class='sua' title='Sửa'></a>
                         <a href='javascript:XoaDanhMuc(" + dt.Rows[i]["MaDM"] + @")' class='xoa' title='Xóa'></a>
                     </td>
@@ -40,5 +45,16 @@ namespace ASPWebForm_emdep.vn.cms.admin.SanPham.QuanLyDanhMuc
             }
 
         }
+        //Hàm kiểm tra danh mục có danh mục con hay ko
+        bool CoDanhMucCon(string MaDMCha)
+        {
+            DataTable dt = new DataTable();
+            dt = ASPWebForm_emdep.vn.App_Code.Database.DanhMuc.Thongtin_Danhmuc_by_MaDMCha(MaDMCha);
+            if (dt.Rows.Count > 0)
+                return true;
+            else
+                return false;
+        }
     }
+
 }

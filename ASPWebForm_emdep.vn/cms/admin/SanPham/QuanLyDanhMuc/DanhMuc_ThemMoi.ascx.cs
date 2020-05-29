@@ -61,7 +61,18 @@ namespace ASPWebForm_emdep.vn.cms.admin.SanPham.QuanLyDanhMuc
             for (int i = 0; i < dt.Rows.Count; i++)
             {
                 ddlDanhMucCha.Items.Add(new ListItem(dt.Rows[i]["TenDM"].ToString(), dt.Rows[i]["MaDM"].ToString()));
-                //LayDanhMucCon(dt.Rows[i]["MaDM"].ToString(), "___");
+                LayDanhMucCon(dt.Rows[i]["MaDM"].ToString(), "___");
+            }
+        }
+        private void LayDanhMucCon(string MaDMCha, string KhoangCach)
+        {
+            DataTable dt = new DataTable();
+            dt = ASPWebForm_emdep.vn.App_Code.Database.DanhMuc.Thongtin_Danhmuc_by_MaDMCha(MaDMCha);
+
+            for (int i = 0; i < dt.Rows.Count; i++)
+            {
+                ddlDanhMucCha.Items.Add(new ListItem(KhoangCach + dt.Rows[i]["TenDM"].ToString(), dt.Rows[i]["MaDM"].ToString()));
+                LayDanhMucCon(dt.Rows[i]["MaDM"].ToString(), KhoangCach + "___");
             }
         }
         protected void btThemMoi_Click(object sender, EventArgs e)
