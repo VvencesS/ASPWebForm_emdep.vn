@@ -32,7 +32,7 @@ namespace ASPWebForm_emdep.vn.cms.admin.SanPham.QuanLyDanhMuc
                     <td class='cotThuTu'>" + dt.Rows[i]["ThuTu"] + @"</td>
                     <td class='cotCongCu'>
                         <a href='#' class='dmcon' title='Xem danh mục con'></a>
-                        <a href='#' class='sua' title='Sửa'></a>
+                        <a href='Admin.aspx?modul=SanPham&modulphu=DanhMuc&thaotac=ChinhSua&id=" + dt.Rows[i]["MaDM"] + @"' class='sua' title='Sửa'></a>
                         <a href='#' class='xoa' title='Xóa'></a>
                     </td>
                 </tr>

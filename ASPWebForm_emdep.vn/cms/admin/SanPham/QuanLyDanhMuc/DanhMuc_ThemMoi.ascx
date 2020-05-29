@@ -19,10 +19,10 @@
     <div class="thongTin">
         <div class="tenTruong">Ảnh Đại Diện</div>
         <div class="oNhap">
-            <%--<div>
+            <div>
                 <asp:HiddenField ID="hdTenAnhDaiDienCu" runat="server" />
                 <asp:Literal ID="ltrAnhDaiDien" runat="server"></asp:Literal>
-            </div>--%>
+            </div>
             <asp:FileUpload ID="flAnhDaiDien" runat="server" />
         </div>
     </div>

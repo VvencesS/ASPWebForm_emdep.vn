@@ -51,6 +51,24 @@ namespace ASPWebForm_emdep.vn.cms.admin.SanPham.QuanLyDanhMuc
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator1;
 
         /// <summary>
+        /// hdTenAnhDaiDienCu control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField hdTenAnhDaiDienCu;
+
+        /// <summary>
+        /// ltrAnhDaiDien control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal ltrAnhDaiDien;
+
+        /// <summary>
         /// flAnhDaiDien control.
         /// </summary>
         /// <remarks>
