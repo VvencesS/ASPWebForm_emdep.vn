@@ -107,7 +107,14 @@
   <ItemGroup>
     <Content Include="Admin.aspx" />
     <Content Include="cms\admin\AdminLoadControl.ascx" />
+    <Content Include="cms\admin\css\add.jpg" />
+    <Content Include="cms\admin\css\check.jpg" />
     <Content Include="cms\admin\css\cssAdmin.css" />
+    <Content Include="cms\admin\css\delete.jpg" />
+    <Content Include="cms\admin\css\edit.jpg" />
+    <Content Include="cms\admin\css\expend.jpg" />
+    <Content Include="cms\admin\css\unCheck.jpg" />
+    <Content Include="cms\admin\css\view.png" />
     <Content Include="cms\admin\KhachHang\KhachHangLoadControl.ascx" />
     <Content Include="cms\admin\KhachHang\KhachHang_HienThi.ascx" />
     <Content Include="cms\admin\Menu\MenuLoadControl.ascx" />

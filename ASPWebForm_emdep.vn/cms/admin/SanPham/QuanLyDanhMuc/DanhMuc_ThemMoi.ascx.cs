@@ -36,7 +36,10 @@ namespace ASPWebForm_emdep.vn.cms.admin.SanPham.QuanLyDanhMuc
 
             if (flAnhDaiDien.FileContent.Length > 0)
             {
-                if (flAnhDaiDien.FileName.EndsWith(".jpeg") || flAnhDaiDien.FileName.EndsWith(".jpg") || flAnhDaiDien.FileName.EndsWith(".png") || flAnhDaiDien.FileName.EndsWith(".gif"))
+                if (flAnhDaiDien.FileName.EndsWith(".jpeg") 
+                    || flAnhDaiDien.FileName.EndsWith(".jpg") 
+                    || flAnhDaiDien.FileName.EndsWith(".png") 
+                    || flAnhDaiDien.FileName.EndsWith(".gif"))
                 {
                     flAnhDaiDien.SaveAs(Server.MapPath("pic/SanPham/") + flAnhDaiDien.FileName);
                 }
