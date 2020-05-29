@@ -143,6 +143,7 @@
     <Content Include="cms\admin\SanPham\QuanLyMau\MauLoadControl.ascx" />
     <Content Include="cms\admin\SanPham\QuanLyMau\Mau_HienThi.ascx" />
     <Content Include="cms\admin\SanPham\QuanLyMau\Mau_ThemMoi.ascx" />
+    <Content Include="cms\admin\SanPham\QuanLyNhomSanPham\Ajax\NhomSanPham.aspx" />
     <Content Include="cms\admin\SanPham\QuanLyNhomSanPham\NhomLoadControl.ascx" />
     <Content Include="cms\admin\SanPham\QuanLyNhomSanPham\NhomSanPham_HienThi.ascx" />
     <Content Include="cms\admin\SanPham\QuanLyNhomSanPham\NhomSanPham_ThemMoi.ascx" />
@@ -186,7 +187,7 @@
     <Content Include="App_Code\Database\Menu.cs" />
     <Content Include="App_Code\Database\NhanVien.cs" />
     <Content Include="App_Code\Database\NhomQuangCao.cs" />
-    <Content Include="App_Code\Database\NhomSanPham.cs" />
+    <Compile Include="App_Code\Database\NhomSanPham.cs" />
     <Content Include="App_Code\Database\PhieuDauGia.cs" />
     <Content Include="App_Code\Database\QuangCao.cs" />
     <Content Include="App_Code\Database\QuyenDangNhap.cs" />
@@ -396,6 +397,13 @@
     </Compile>
     <Compile Include="cms\admin\SanPham\QuanLyMau\Mau_ThemMoi.ascx.designer.cs">
       <DependentUpon>Mau_ThemMoi.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\admin\SanPham\QuanLyNhomSanPham\Ajax\NhomSanPham.aspx.cs">
+      <DependentUpon>NhomSanPham.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\admin\SanPham\QuanLyNhomSanPham\Ajax\NhomSanPham.aspx.designer.cs">
+      <DependentUpon>NhomSanPham.aspx</DependentUpon>
     </Compile>
     <Compile Include="cms\admin\SanPham\QuanLyNhomSanPham\NhomLoadControl.ascx.cs">
       <DependentUpon>NhomLoadControl.ascx</DependentUpon>
