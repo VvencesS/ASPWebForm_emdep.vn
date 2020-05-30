@@ -11,7 +11,19 @@ namespace ASPWebForm_emdep.vn
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            //Kiểm tra nếu đã đăng nhập thì mới cho vào trang này
+            if (Session["DangNhap"] != null && Session["DangNhap"].ToString() == "1")
+            {
+                //Đã đăng nhập
+            }
+            else
+            {
+                //Nếu chưa đăng nhập --> đẩy về trang login
+                Response.Redirect("/Login.aspx");
+            }
 
+            if (!IsPostBack)
+                ltrTenDangNhap.Text = Session["TenDangNhap"].ToString();
         }
         protected string DanhDau(string tenModul)
         {
@@ -24,6 +36,16 @@ namespace ASPWebForm_emdep.vn
                 s = "current";
 
             return s;
+        }
+
+        protected void lbtDangXuat_Click(object sender, EventArgs e)
+        {
+            //Xóa các session đã lưu
+            Session["DangNhap"] = null;
+            Session["TenDangNhap"] = null;
+
+            //đẩy về trang đăng nhập
+            Response.Redirect("/Login.aspx");
         }
     }
 }

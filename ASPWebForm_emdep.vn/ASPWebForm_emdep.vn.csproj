@@ -933,6 +933,7 @@
     <Content Include="cms\admin\css\add.jpg" />
     <Content Include="cms\admin\css\check.jpg" />
     <Content Include="cms\admin\css\cssAdmin.css" />
+    <Content Include="cms\admin\css\cssDangNhap.css" />
     <Content Include="cms\admin\css\delete.jpg" />
     <Content Include="cms\admin\css\edit.jpg" />
     <Content Include="cms\admin\css\expend.jpg" />
@@ -995,6 +996,8 @@
     <Content Include="cms\admin\TinTuc\DanhSachTinTuc\DanhSachTinTuc_ThemMoi.ascx" />
     <Content Include="cms\admin\TinTuc\TinTucLoadControl.ascx" />
     <Content Include="Global.asax" />
+    <Content Include="Login.aspx" />
+    <Content Include="pic\Logo\emdep.jpg" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -1423,6 +1426,13 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
