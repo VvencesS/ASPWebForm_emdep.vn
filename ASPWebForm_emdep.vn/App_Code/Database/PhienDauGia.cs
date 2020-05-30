@@ -10,7 +10,7 @@ namespace ASPWebForm_emdep.vn.App_Code.Database
     /// <summary>
     /// Summary description for PhienDauGia
     /// </summary>
-    public class PhieuDauGia
+    public class PhienDauGia
     {
         #region Phương thức xóa Phiên đấu giá
         /// Phương thức xóa Size theo mã phiên đấu giá truyền vào

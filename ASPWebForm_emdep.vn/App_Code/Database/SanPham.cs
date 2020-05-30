@@ -43,7 +43,7 @@ namespace ASPWebForm_emdep.vn.App_Code.Database
         /// <param name="maDM"></param>
         /// <param name="nhomID"></param>
         /// <param name="ret"></param>
-        public static void Sanpham_Inser(string tensp, string mauID, string sizeID, string chatieuID, string anhsanpham, string soluongsp, string giasp, string motasp, string ngaytao, string ngayhuy, string maDM, string nhomID, string ret)
+        public static void Sanpham_Inser(string tensp, string mauID, string sizeID, string chatieuID, string anhsanpham, string soluongsp, string giasp, string motasp, DateTime ngaytao, DateTime ngayhuy, string maDM, string nhomID, string ret)
         {
             SqlCommand cmd = new SqlCommand("sanpham_inser");
             cmd.CommandType = CommandType.StoredProcedure;

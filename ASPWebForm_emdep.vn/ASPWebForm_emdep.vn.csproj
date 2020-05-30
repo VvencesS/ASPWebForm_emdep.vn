@@ -154,6 +154,7 @@
     <Content Include="cms\admin\SanPham\QuanLySanPham\SanPhamLoadControl.ascx" />
     <Content Include="cms\admin\SanPham\QuanLySanPham\SanPham_HienThi.ascx" />
     <Content Include="cms\admin\SanPham\QuanLySanPham\SanPham_ThemMoi.ascx" />
+    <Content Include="cms\admin\SanPham\QuanLySize\Ajax\Size.aspx" />
     <Content Include="cms\admin\SanPham\QuanLySize\SizeLoadControl.ascx" />
     <Content Include="cms\admin\SanPham\QuanLySize\Size_HienThi.ascx" />
     <Content Include="cms\admin\SanPham\QuanLySize\Size_ThemMoi.ascx" />
@@ -188,11 +189,11 @@
     <Content Include="App_Code\Database\NhanVien.cs" />
     <Content Include="App_Code\Database\NhomQuangCao.cs" />
     <Compile Include="App_Code\Database\NhomSanPham.cs" />
-    <Content Include="App_Code\Database\PhieuDauGia.cs" />
+    <Compile Include="App_Code\Database\PhienDauGia.cs" />
     <Content Include="App_Code\Database\QuangCao.cs" />
     <Content Include="App_Code\Database\QuyenDangNhap.cs" />
-    <Content Include="App_Code\Database\SanPham.cs" />
-    <Content Include="App_Code\Database\Size.cs" />
+    <Compile Include="App_Code\Database\SanPham.cs" />
+    <Compile Include="App_Code\Database\Size.cs" />
     <Content Include="App_Code\Database\TinTuc.cs" />
     <Compile Include="Admin.aspx.cs">
       <DependentUpon>Admin.aspx</DependentUpon>
@@ -474,6 +475,13 @@
     </Compile>
     <Compile Include="cms\admin\SanPham\QuanLySanPham\SanPham_ThemMoi.ascx.designer.cs">
       <DependentUpon>SanPham_ThemMoi.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\admin\SanPham\QuanLySize\Ajax\Size.aspx.cs">
+      <DependentUpon>Size.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\admin\SanPham\QuanLySize\Ajax\Size.aspx.designer.cs">
+      <DependentUpon>Size.aspx</DependentUpon>
     </Compile>
     <Compile Include="cms\admin\SanPham\QuanLySize\SizeLoadControl.ascx.cs">
       <DependentUpon>SizeLoadControl.ascx</DependentUpon>
