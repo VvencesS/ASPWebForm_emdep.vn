@@ -174,7 +174,7 @@ namespace ASPWebForm_emdep.vn.cms.admin.SanPham.QuanLySanPham
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbMoTa;
+        protected global::CKEditor.NET.CKEditorControl tbMoTa;
 
         /// <summary>
         /// cbThemNhieuDanhMuc control.

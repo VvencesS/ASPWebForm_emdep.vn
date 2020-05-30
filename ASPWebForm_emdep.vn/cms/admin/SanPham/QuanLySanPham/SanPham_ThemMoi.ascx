@@ -1,4 +1,5 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SanPham_ThemMoi.ascx.cs" Inherits="ASPWebForm_emdep.vn.cms.admin.SanPham.QuanLySanPham.SanPham_ThemMoi" %>
+<%@ Register Assembly="CKEditor.NET" Namespace="CKEditor.NET" TagPrefix="CKEditor" %>
 <div class="head">
     Thêm mới, chỉnh sửa sản phẩm
 </div>
@@ -70,8 +71,8 @@
     <div class="thongTin">
         <div class="tenTruong">Mô tả sản phẩm</div>
         <div class="oNhap">            
-            <asp:TextBox ID="tbMoTa" TextMode="MultiLine" runat="server" Height="150px"></asp:TextBox>
-            <%--<CKEditor:CKEditorControl ID="tbMoTa" runat="server" FilebrowserImageBrowseUrl="ckeditor/ckfinder/ckfinder.aspx?type=Images&path=pic"></CKEditor:CKEditorControl>--%>
+            <%--<asp:TextBox ID="tbMoTa" TextMode="MultiLine" runat="server" Height="150px"></asp:TextBox>--%>
+            <CKEditor:CKEditorControl ID="tbMoTa" runat="server" FilebrowserImageBrowseUrl="ckeditor/ckfinder/ckfinder.aspx?type=Images&path=pic"></CKEditor:CKEditorControl>
         </div>
     </div>
     <div class="thongTin">
