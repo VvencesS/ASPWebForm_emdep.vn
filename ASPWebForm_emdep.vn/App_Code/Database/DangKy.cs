@@ -40,7 +40,7 @@ namespace ASPWebForm_emdep.vn.App_Code.Database
         /// <param name="gioitinhdk"></param>
         /// <param name="maquyen"></param>
         /// <param name="ret"></param>
-        public static void Dangky_Inser(string tendangnhap, string matkhau, string emaildk, string diachidk, string tendaydu, string cauhoibaomat, string ngaysinh, string gioitinhdk, string maquyen, string ret)
+        public static void Dangky_Inser(string tendangnhap, string matkhau, string emaildk, string diachidk, string tendaydu, string cauhoibaomat, DateTime ngaysinh, string gioitinhdk, string maquyen, string ret)
         {
             SqlCommand cmd = new SqlCommand("dangky_inser");
             cmd.CommandType = CommandType.StoredProcedure;
@@ -72,7 +72,7 @@ namespace ASPWebForm_emdep.vn.App_Code.Database
         /// <param name="ngaysinh"></param>
         /// <param name="gioitinhdk"></param>
         /// <param name="maquyen"></param>
-        public static void Dangky_Update(string tendangnhap, string matkhau, string emaildk, string diachidk, string tendaydu, string cauhoibaomat, string ngaysinh, string gioitinhdk, string maquyen)
+        public static void Dangky_Update(string tendangnhap, string matkhau, string emaildk, string diachidk, string tendaydu, string cauhoibaomat, DateTime ngaysinh, string gioitinhdk, string maquyen)
         {
             SqlCommand cmd = new SqlCommand("dangky_update");
             cmd.CommandType = CommandType.StoredProcedure;

@@ -983,6 +983,7 @@
     <Content Include="cms\admin\SanPham\QuanLySize\Size_HienThi.ascx" />
     <Content Include="cms\admin\SanPham\QuanLySize\Size_ThemMoi.ascx" />
     <Content Include="cms\admin\SanPham\SanPhamLoadControl.ascx" />
+    <Content Include="cms\admin\TaiKhoan\Ajax\TaiKhoan.aspx" />
     <Content Include="cms\admin\TaiKhoan\TaiKhoanLoadControl.ascx" />
     <Content Include="cms\admin\TaiKhoan\TaiKhoan_HienThi.ascx" />
     <Content Include="cms\admin\TaiKhoan\TaiKhoan_ThemMoi.ascx" />
@@ -1001,7 +1002,7 @@
     <Compile Include="App_Code\Database\ChatLieu.cs" />
     <Content Include="App_Code\Database\ChiTietDonDatHang.cs" />
     <Content Include="App_Code\Database\ChiTietDonHang.cs" />
-    <Content Include="App_Code\Database\DangKy.cs" />
+    <Compile Include="App_Code\Database\DangKy.cs" />
     <Compile Include="App_Code\Database\DanhMuc.cs" />
     <Content Include="App_Code\Database\DanhMucTin.cs" />
     <Content Include="App_Code\Database\DonDatHang.cs" />
@@ -1015,7 +1016,7 @@
     <Compile Include="App_Code\Database\NhomSanPham.cs" />
     <Compile Include="App_Code\Database\PhienDauGia.cs" />
     <Content Include="App_Code\Database\QuangCao.cs" />
-    <Content Include="App_Code\Database\QuyenDangNhap.cs" />
+    <Compile Include="App_Code\Database\QuyenDangNhap.cs" />
     <Compile Include="App_Code\Database\SanPham.cs" />
     <Compile Include="App_Code\Database\Size.cs" />
     <Content Include="App_Code\Database\TinTuc.cs" />
@@ -1027,6 +1028,7 @@
       <DependentUpon>Admin.aspx</DependentUpon>
     </Compile>
     <Content Include="App_Code\Database\Global.cs" />
+    <Compile Include="App_Code\MaHoa.cs" />
     <Compile Include="cms\admin\AdminLoadControl.ascx.cs">
       <DependentUpon>AdminLoadControl.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1341,6 +1343,13 @@
     </Compile>
     <Compile Include="cms\admin\SanPham\SanPhamLoadControl.ascx.designer.cs">
       <DependentUpon>SanPhamLoadControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\admin\TaiKhoan\Ajax\TaiKhoan.aspx.cs">
+      <DependentUpon>TaiKhoan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\admin\TaiKhoan\Ajax\TaiKhoan.aspx.designer.cs">
+      <DependentUpon>TaiKhoan.aspx</DependentUpon>
     </Compile>
     <Compile Include="cms\admin\TaiKhoan\TaiKhoanLoadControl.ascx.cs">
       <DependentUpon>TaiKhoanLoadControl.ascx</DependentUpon>
