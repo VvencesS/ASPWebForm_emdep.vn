@@ -974,6 +974,7 @@
     <Content Include="cms\admin\SanPham\QuanLyPhienDauGia\PhienDauGia_ChiTiet.ascx" />
     <Content Include="cms\admin\SanPham\QuanLyPhienDauGia\PhienDauGia_HienThi.ascx" />
     <Content Include="cms\admin\SanPham\QuanLyPhienDauGia\PhienDauGia_ThemMoi.ascx" />
+    <Content Include="cms\admin\SanPham\QuanLySanPham\Ajax\SanPham.aspx" />
     <Content Include="cms\admin\SanPham\QuanLySanPham\SanPhamLoadControl.ascx" />
     <Content Include="cms\admin\SanPham\QuanLySanPham\SanPham_HienThi.ascx" />
     <Content Include="cms\admin\SanPham\QuanLySanPham\SanPham_ThemMoi.ascx" />
@@ -1277,6 +1278,13 @@
     </Compile>
     <Compile Include="cms\admin\SanPham\QuanLyPhienDauGia\PhienDauGia_ThemMoi.ascx.designer.cs">
       <DependentUpon>PhienDauGia_ThemMoi.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\admin\SanPham\QuanLySanPham\Ajax\SanPham.aspx.cs">
+      <DependentUpon>SanPham.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\admin\SanPham\QuanLySanPham\Ajax\SanPham.aspx.designer.cs">
+      <DependentUpon>SanPham.aspx</DependentUpon>
     </Compile>
     <Compile Include="cms\admin\SanPham\QuanLySanPham\SanPhamLoadControl.ascx.cs">
       <DependentUpon>SanPhamLoadControl.ascx</DependentUpon>

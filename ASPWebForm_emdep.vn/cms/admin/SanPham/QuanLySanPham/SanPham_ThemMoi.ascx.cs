@@ -35,32 +35,32 @@ namespace ASPWebForm_emdep.vn.cms.admin.SanPham.QuanLySanPham
         {
             if (thaotac == "ChinhSua")
             {
-                //btThemMoi.Text = "Chỉnh Sửa";
-                //cbThemNhieuDanhMuc.Visible = false;
+                btThemMoi.Text = "Chỉnh Sửa";
+                cbThemNhieuDanhMuc.Visible = false;
 
-                //DataTable dt = new DataTable();
-                //dt = ASPWebForm_emdep.vn.App_Code.Database.SanPham.Thongtin_Sanpham_by_id(id);
-                //if (dt.Rows.Count > 0)
-                //{
-                //    ddlDanhMucCha.SelectedValue = dt.Rows[0]["MaDM"].ToString();
-                //    tbTenSanPham.Text = dt.Rows[0]["TenSP"].ToString();
-                //    tbSoLuong.Text = dt.Rows[0]["SoLuongSP"].ToString();
-                //    tbGiaBan.Text = dt.Rows[0]["GiaSP"].ToString();
+                DataTable dt = new DataTable();
+                dt = ASPWebForm_emdep.vn.App_Code.Database.SanPham.Thongtin_Sanpham_by_id(id);
+                if (dt.Rows.Count > 0)
+                {
+                    ddlDanhMucCha.SelectedValue = dt.Rows[0]["MaDM"].ToString();
+                    tbTenSanPham.Text = dt.Rows[0]["TenSP"].ToString();
+                    tbSoLuong.Text = dt.Rows[0]["SoLuongSP"].ToString();
+                    tbGiaBan.Text = dt.Rows[0]["GiaSP"].ToString();
 
-                //    tbNgayTao.Text = dt.Rows[0]["NgayTao"].ToString();
-                //    tbNgayHuy.Text = dt.Rows[0]["NgayHuy"].ToString();
+                    tbNgayTao.Text = dt.Rows[0]["NgayTao"].ToString();
+                    tbNgayHuy.Text = dt.Rows[0]["NgayHuy"].ToString();
 
-                //    ddlMau.SelectedValue = dt.Rows[0]["MauID"].ToString();
-                //    ddlSize.SelectedValue = dt.Rows[0]["SizeID"].ToString();
-                //    ddlChatLieu.SelectedValue = dt.Rows[0]["ChatLieuID"].ToString();
+                    ddlMau.SelectedValue = dt.Rows[0]["MauID"].ToString();
+                    ddlSize.SelectedValue = dt.Rows[0]["SizeID"].ToString();
+                    ddlChatLieu.SelectedValue = dt.Rows[0]["ChatLieuID"].ToString();
 
-                //    ddlNhom.SelectedValue = dt.Rows[0]["NhomID"].ToString();
+                    ddlNhom.SelectedValue = dt.Rows[0]["NhomID"].ToString();
 
-                //    tbMoTa.Text = dt.Rows[0]["MotaSP"].ToString();
+                    tbMoTa.Text = dt.Rows[0]["MotaSP"].ToString();
 
-                //    ltrAnhDaiDien.Text = "<img class='anhDaiDien'src='/pic/SanPham/" + dt.Rows[0]["AnhSP"] + @"'/>";
-                //    hdTenAnhDaiDienCu.Value = dt.Rows[0]["AnhSP"].ToString();
-                //}
+                    ltrAnhDaiDien.Text = "<img class='anhDaiDien'src='/pic/SanPham/" + dt.Rows[0]["AnhSP"] + @"'/>";
+                    hdTenAnhDaiDienCu.Value = dt.Rows[0]["AnhSP"].ToString();
+                }
             }
 
             else
@@ -202,7 +202,7 @@ namespace ASPWebForm_emdep.vn.cms.admin.SanPham.QuanLySanPham
                 }
 
                 ASPWebForm_emdep.vn.App_Code.Database.SanPham.Sanpham_Update(id, tbTenSanPham.Text, ddlMau.SelectedValue, ddlSize.SelectedValue, ddlChatLieu.SelectedValue, tenAnhDaiDien, tbSoLuong.Text, tbGiaBan.Text, tbMoTa.Text,
-                tbNgayTao.Text, tbNgayHuy.Text, ddlDanhMucCha.SelectedValue, ddlNhom.SelectedValue);
+                DateTime.Parse(tbNgayTao.Text), DateTime.Parse(tbNgayHuy.Text), ddlDanhMucCha.SelectedValue, ddlNhom.SelectedValue);
 
                 //đẩy trang về trang danh sách các damnh mục đã tạo
                 Response.Redirect("Admin.aspx?modul=SanPham&modulphu=DanhSachSanPham");

@@ -83,7 +83,7 @@ namespace ASPWebForm_emdep.vn.App_Code.Database
         /// <param name="ngayhuy"></param>
         /// <param name="madm"></param>
         /// <param name="nhomid"></param>
-        public static void Sanpham_Update(string masp, string tensp, string mauid, string sizeid, string chatieuid, string anhsp, string soluongsp, string giasp, string motasp, string ngaytao, string ngayhuy, string madm, string nhomid)
+        public static void Sanpham_Update(string masp, string tensp, string mauid, string sizeid, string chatieuid, string anhsp, string soluongsp, string giasp, string motasp, DateTime ngaytao, DateTime ngayhuy, string madm, string nhomid)
         {
             SqlCommand cmd = new SqlCommand("sanpham_update");
             cmd.CommandType = CommandType.StoredProcedure;
