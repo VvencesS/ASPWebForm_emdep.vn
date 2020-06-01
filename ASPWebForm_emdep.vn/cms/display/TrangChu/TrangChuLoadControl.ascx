@@ -153,15 +153,7 @@
         </div>
         <div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 1300px; height: 500px; overflow: hidden;">
 
-            <div data-p="225.00" style="display: none;">
-                <img data-u="image" src="../js/full-width-slider.slider/img/slider/slide1.jpg" />
-            </div>
-            <div data-p="225.00" data-po="80% 55%" style="display: none;">
-                <img data-u="image" src="../js/full-width-slider.slider/img/slider/slide2.jpg" />
-            </div>
-            <div data-p="225.00" data-po="80% 55%" style="display: none;">
-                <img data-u="image" src="../js/full-width-slider.slider/img/slider/slide3.jpg" />
-            </div>
+            <asp:Literal ID="ltrSlide" runat="server"></asp:Literal>
             <!--<a data-u="add" href="http://www.jssor.com/demos/full-width-slider.slider" style="display:none">Full Width Slider</a>-->
 
         </div>
