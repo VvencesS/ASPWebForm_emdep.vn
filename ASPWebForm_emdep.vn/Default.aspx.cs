@@ -19,10 +19,27 @@ namespace ASPWebForm_emdep.vn
 
                 ltrLogo.Text = LayLogo();
                 ltrBanner.Text = LayBanner();
+                ltrMenu.Text = LayMenu();
 
-                
             }
         }
+        #region Lấy menu
+        private string LayMenu()
+        {
+            string s = "";
+            DataTable dt = new DataTable();
+            dt = ASPWebForm_emdep.vn.App_Code.Database.Menu.Thongtin_Menu_by_MaMenuCha("0");
+            for (int i = 0; i < dt.Rows.Count; i++)
+            {
+                string lienKet = dt.Rows[i]["LienKet"].ToString();
+                if (lienKet == "")
+                    lienKet = "#";
+
+                s += @"<li class='menu1'><a href='" + lienKet + @"' title='" + dt.Rows[i]["TenMenu"] + @"'>" + dt.Rows[i]["TenMenu"] + @"</a></li>";
+            }
+            return s;
+        }
+        #endregion
         #region Lấy banner
         private string LayBanner()
         {

@@ -33,18 +33,13 @@
                 <div class="contener">
                     <div id="menutrai">
                         <ul class="menungang">
-                            <li class="menu1"><a href="#">TRANG CHỦ</a></li>
-                            <li class="menu1"><a href="#">GIỚI THIỆU</a></li>
-                            <li class="menu1"><a href="#">SẢN PHẨM</a></li>
-                            <li class="menu1"><a href="#">TIN TỨC</a></li>
-                            <li class="menu1"><a href="#">LIÊN HỆ</a></li>
-                            <li class="menu1"><a href="#">THANH TOÁN</a></li>
+                            <asp:Literal ID="ltrMenu" runat="server"></asp:Literal>
                         </ul>
                     </div>
                     <div id="dangnhap">
                         <ul>
-                            <li class="dangnhap1">/<a href="#">Đăng ký</a></li>
-                            <li class="dangnhap2"><a href="#">Đăng nhập</a></li>
+                            <li class="dangnhap1">/<a href="Default.aspx?modul=ThanhVien&modulphu=DangKy">Đăng ký</a></li>
+                            <li class="dangnhap2"><a href="Default.aspx?modul=ThanhVien&modulphu=DangNhap">Đăng nhập</a></li>
                         </ul>
                     </div>
                 </div>
