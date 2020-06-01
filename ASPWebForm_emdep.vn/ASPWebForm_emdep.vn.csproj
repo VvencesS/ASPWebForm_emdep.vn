@@ -990,9 +990,11 @@
     <Content Include="cms\admin\TaiKhoan\TaiKhoanLoadControl.ascx" />
     <Content Include="cms\admin\TaiKhoan\TaiKhoan_HienThi.ascx" />
     <Content Include="cms\admin\TaiKhoan\TaiKhoan_ThemMoi.ascx" />
+    <Content Include="cms\admin\TinTuc\DanhMucTin\Ajax\DanhMucTin.aspx" />
     <Content Include="cms\admin\TinTuc\DanhMucTin\DanhMucTinLoadControl.ascx" />
     <Content Include="cms\admin\TinTuc\DanhMucTin\DanhMucTin_HienThi.ascx" />
     <Content Include="cms\admin\TinTuc\DanhMucTin\DanhMucTin_ThemMoi.ascx" />
+    <Content Include="cms\admin\TinTuc\DanhSachTinTuc\Ajax\TinTuc.aspx" />
     <Content Include="cms\admin\TinTuc\DanhSachTinTuc\DanhSachTinTucLoadControl.ascx" />
     <Content Include="cms\admin\TinTuc\DanhSachTinTuc\DanhSachTinTuc_HienThi.ascx" />
     <Content Include="cms\admin\TinTuc\DanhSachTinTuc\DanhSachTinTuc_ThemMoi.ascx" />
@@ -1005,18 +1007,18 @@
   <ItemGroup>
     <Compile Include="App_Code\Database\SQLDatabase.cs" />
     <Compile Include="App_Code\Database\ChatLieu.cs" />
-    <Content Include="App_Code\Database\ChiTietDonDatHang.cs" />
-    <Content Include="App_Code\Database\ChiTietDonHang.cs" />
+    <Compile Include="App_Code\Database\ChiTietDonDatHang.cs" />
+    <Compile Include="App_Code\Database\ChiTietDonHang.cs" />
     <Compile Include="App_Code\Database\DangKy.cs" />
     <Compile Include="App_Code\Database\DanhMuc.cs" />
-    <Content Include="App_Code\Database\DanhMucTin.cs" />
-    <Content Include="App_Code\Database\DonDatHang.cs" />
-    <Content Include="App_Code\Database\HoaDon.cs" />
-    <Content Include="App_Code\Database\KhachHang.cs" />
-    <Content Include="App_Code\Database\LuotDauGia.cs" />
+    <Compile Include="App_Code\Database\DanhMucTin.cs" />
+    <Compile Include="App_Code\Database\DonDatHang.cs" />
+    <Compile Include="App_Code\Database\HoaDon.cs" />
+    <Compile Include="App_Code\Database\KhachHang.cs" />
+    <Compile Include="App_Code\Database\LuotDauGia.cs" />
     <Compile Include="App_Code\Database\Mau.cs" />
-    <Content Include="App_Code\Database\Menu.cs" />
-    <Content Include="App_Code\Database\NhanVien.cs" />
+    <Compile Include="App_Code\Database\Menu.cs" />
+    <Compile Include="App_Code\Database\NhanVien.cs" />
     <Compile Include="App_Code\Database\NhomQuangCao.cs" />
     <Compile Include="App_Code\Database\NhomSanPham.cs" />
     <Compile Include="App_Code\Database\PhienDauGia.cs" />
@@ -1024,7 +1026,7 @@
     <Compile Include="App_Code\Database\QuyenDangNhap.cs" />
     <Compile Include="App_Code\Database\SanPham.cs" />
     <Compile Include="App_Code\Database\Size.cs" />
-    <Content Include="App_Code\Database\TinTuc.cs" />
+    <Compile Include="App_Code\Database\TinTuc.cs" />
     <Compile Include="Admin.aspx.cs">
       <DependentUpon>Admin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1391,6 +1393,13 @@
     <Compile Include="cms\admin\TaiKhoan\TaiKhoan_ThemMoi.ascx.designer.cs">
       <DependentUpon>TaiKhoan_ThemMoi.ascx</DependentUpon>
     </Compile>
+    <Compile Include="cms\admin\TinTuc\DanhMucTin\Ajax\DanhMucTin.aspx.cs">
+      <DependentUpon>DanhMucTin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\admin\TinTuc\DanhMucTin\Ajax\DanhMucTin.aspx.designer.cs">
+      <DependentUpon>DanhMucTin.aspx</DependentUpon>
+    </Compile>
     <Compile Include="cms\admin\TinTuc\DanhMucTin\DanhMucTinLoadControl.ascx.cs">
       <DependentUpon>DanhMucTinLoadControl.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1411,6 +1420,13 @@
     </Compile>
     <Compile Include="cms\admin\TinTuc\DanhMucTin\DanhMucTin_ThemMoi.ascx.designer.cs">
       <DependentUpon>DanhMucTin_ThemMoi.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\admin\TinTuc\DanhSachTinTuc\Ajax\TinTuc.aspx.cs">
+      <DependentUpon>TinTuc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\admin\TinTuc\DanhSachTinTuc\Ajax\TinTuc.aspx.designer.cs">
+      <DependentUpon>TinTuc.aspx</DependentUpon>
     </Compile>
     <Compile Include="cms\admin\TinTuc\DanhSachTinTuc\DanhSachTinTucLoadControl.ascx.cs">
       <DependentUpon>DanhSachTinTucLoadControl.ascx</DependentUpon>
@@ -1456,6 +1472,7 @@
     <Folder Include="cms\display\" />
     <Folder Include="pic\QuangCao\" />
     <Folder Include="pic\SanPham\" />
+    <Folder Include="pic\TinTuc\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="ckeditor\.htaccess" />
