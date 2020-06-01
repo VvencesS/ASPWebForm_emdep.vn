@@ -22,5 +22,14 @@ namespace ASPWebForm_emdep.vn.cms.display.TrangChu
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Literal ltrSlide;
+
+        /// <summary>
+        /// ltrNhomSanPham control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal ltrNhomSanPham;
     }
 }
