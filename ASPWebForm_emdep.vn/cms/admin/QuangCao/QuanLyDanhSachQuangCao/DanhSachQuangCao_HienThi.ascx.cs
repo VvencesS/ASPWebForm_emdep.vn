@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -11,6 +12,32 @@ namespace ASPWebForm_emdep.vn.cms.admin.QuangCao.QuanLyDanhSachQuangCao
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!IsPostBack)
+                LayQuangCao();
+        }
+
+        private void LayQuangCao()
+        {
+            DataTable dt = new DataTable();
+            dt = ASPWebForm_emdep.vn.App_Code.Database.QuangCao.Thongtin_Quangcao();
+            for (int i = 0; i < dt.Rows.Count; i++)
+            {
+                ltrQuangCao.Text += @"
+            <tr id='maDong_" + dt.Rows[i]["QuangCaoID"] + @"'>
+                <td class='cotMa'>" + dt.Rows[i]["QuangCaoID"] + @"</td>
+                <td class='cotTen'>" + dt.Rows[i]["TenQC"] + @"</td>
+                <td class='cotAnh'>
+                    <img class='anhDaiDien'src='/pic/QuangCao/" + dt.Rows[i]["AnhQC"] + @"'/>
+                    <img class='anhDaiDienHover'src='/pic/QuangCao/" + dt.Rows[i]["AnhQC"] + @"'/>
+                </td>
+                <td class='cotThuTu'>" + dt.Rows[i]["ThuTuQC"] + @"</td>
+                <td class='cotCongCu'>
+                    <a href='Admin.aspx?modul=QuangCao&modulphu=DanhSachQuangCao&thaotac=ChinhSua&id=" + dt.Rows[i]["QuangCaoID"] + @"' class='sua' title='Sửa'></a>
+                    <a href='javascript:XoaQuangCao(" + dt.Rows[i]["QuangCaoID"] + @")' class='xoa' title='Xóa'></a>
+                </td>
+            </tr>
+            ";
+            }
 
         }
     }

@@ -946,9 +946,11 @@
     <Content Include="cms\admin\Menu\Menu_HienThi.ascx" />
     <Content Include="cms\admin\Menu\Menu_ThemMoi.ascx" />
     <Content Include="cms\admin\QuangCao\QuangCaoLoadControl.ascx" />
+    <Content Include="cms\admin\QuangCao\QuanLyDanhSachQuangCao\Ajax\QuangCao.aspx" />
     <Content Include="cms\admin\QuangCao\QuanLyDanhSachQuangCao\DanhSachQuangCaoLoadControl.ascx" />
     <Content Include="cms\admin\QuangCao\QuanLyDanhSachQuangCao\DanhSachQuangCao_HienThi.ascx" />
     <Content Include="cms\admin\QuangCao\QuanLyDanhSachQuangCao\DanhSachQuangCao_ThemMoi.ascx" />
+    <Content Include="cms\admin\QuangCao\QuanLyNhomQuangCao\Ajax\NhomQuangCao.aspx" />
     <Content Include="cms\admin\QuangCao\QuanLyNhomQuangCao\NhomQuangCaoLoadControl.ascx" />
     <Content Include="cms\admin\QuangCao\QuanLyNhomQuangCao\NhomQuangCao_HienThi.ascx" />
     <Content Include="cms\admin\QuangCao\QuanLyNhomQuangCao\NhomQuangCao_ThemMoi.ascx" />
@@ -1015,10 +1017,10 @@
     <Compile Include="App_Code\Database\Mau.cs" />
     <Content Include="App_Code\Database\Menu.cs" />
     <Content Include="App_Code\Database\NhanVien.cs" />
-    <Content Include="App_Code\Database\NhomQuangCao.cs" />
+    <Compile Include="App_Code\Database\NhomQuangCao.cs" />
     <Compile Include="App_Code\Database\NhomSanPham.cs" />
     <Compile Include="App_Code\Database\PhienDauGia.cs" />
-    <Content Include="App_Code\Database\QuangCao.cs" />
+    <Compile Include="App_Code\Database\QuangCao.cs" />
     <Compile Include="App_Code\Database\QuyenDangNhap.cs" />
     <Compile Include="App_Code\Database\SanPham.cs" />
     <Compile Include="App_Code\Database\Size.cs" />
@@ -1081,6 +1083,13 @@
     <Compile Include="cms\admin\QuangCao\QuangCaoLoadControl.ascx.designer.cs">
       <DependentUpon>QuangCaoLoadControl.ascx</DependentUpon>
     </Compile>
+    <Compile Include="cms\admin\QuangCao\QuanLyDanhSachQuangCao\Ajax\QuangCao.aspx.cs">
+      <DependentUpon>QuangCao.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\admin\QuangCao\QuanLyDanhSachQuangCao\Ajax\QuangCao.aspx.designer.cs">
+      <DependentUpon>QuangCao.aspx</DependentUpon>
+    </Compile>
     <Compile Include="cms\admin\QuangCao\QuanLyDanhSachQuangCao\DanhSachQuangCaoLoadControl.ascx.cs">
       <DependentUpon>DanhSachQuangCaoLoadControl.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1101,6 +1110,13 @@
     </Compile>
     <Compile Include="cms\admin\QuangCao\QuanLyDanhSachQuangCao\DanhSachQuangCao_ThemMoi.ascx.designer.cs">
       <DependentUpon>DanhSachQuangCao_ThemMoi.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\admin\QuangCao\QuanLyNhomQuangCao\Ajax\NhomQuangCao.aspx.cs">
+      <DependentUpon>NhomQuangCao.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\admin\QuangCao\QuanLyNhomQuangCao\Ajax\NhomQuangCao.aspx.designer.cs">
+      <DependentUpon>NhomQuangCao.aspx</DependentUpon>
     </Compile>
     <Compile Include="cms\admin\QuangCao\QuanLyNhomQuangCao\NhomQuangCaoLoadControl.ascx.cs">
       <DependentUpon>NhomQuangCaoLoadControl.ascx</DependentUpon>
@@ -1438,6 +1454,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="cms\display\" />
+    <Folder Include="pic\QuangCao\" />
     <Folder Include="pic\SanPham\" />
   </ItemGroup>
   <ItemGroup>
