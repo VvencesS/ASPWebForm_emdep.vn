@@ -1000,6 +1000,21 @@
     <Content Include="cms\admin\TinTuc\DanhSachTinTuc\DanhSachTinTuc_HienThi.ascx" />
     <Content Include="cms\admin\TinTuc\DanhSachTinTuc\DanhSachTinTuc_ThemMoi.ascx" />
     <Content Include="cms\admin\TinTuc\TinTucLoadControl.ascx" />
+    <Content Include="cms\display\DisplayLoadControl.ascx" />
+    <Content Include="cms\display\SanPham\ChiTietSanPham.ascx" />
+    <Content Include="cms\display\SanPham\DanhSachCacSanPham.ascx" />
+    <Content Include="cms\display\SanPham\GioHang.ascx" />
+    <Content Include="cms\display\SanPham\SanPhamLoadControl.ascx" />
+    <Content Include="cms\display\SanPham\TrangChuModulSanPham.ascx" />
+    <Content Include="cms\display\ThanhVien\DangKy.ascx" />
+    <Content Include="cms\display\ThanhVien\DangNhap.ascx" />
+    <Content Include="cms\display\ThanhVien\ThanhVienLoadControl.ascx" />
+    <Content Include="cms\display\TinTuc\ChiTietTinTuc.ascx" />
+    <Content Include="cms\display\TinTuc\DanhSachCacTinTuc.ascx" />
+    <Content Include="cms\display\TinTuc\TinTucLoadControl.ascx" />
+    <Content Include="cms\display\TinTuc\TrangChuModulTinTuc.ascx" />
+    <Content Include="cms\display\TrangChu\TrangChuLoadControl.ascx" />
+    <Content Include="Default.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Login.aspx" />
     <Content Include="pic\Logo\emdep.jpg" />
@@ -1464,6 +1479,111 @@
     <Compile Include="cms\admin\TinTuc\TinTucLoadControl.ascx.designer.cs">
       <DependentUpon>TinTucLoadControl.ascx</DependentUpon>
     </Compile>
+    <Compile Include="cms\display\DisplayLoadControl.ascx.cs">
+      <DependentUpon>DisplayLoadControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\display\DisplayLoadControl.ascx.designer.cs">
+      <DependentUpon>DisplayLoadControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\display\SanPham\ChiTietSanPham.ascx.cs">
+      <DependentUpon>ChiTietSanPham.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\display\SanPham\ChiTietSanPham.ascx.designer.cs">
+      <DependentUpon>ChiTietSanPham.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\display\SanPham\DanhSachCacSanPham.ascx.cs">
+      <DependentUpon>DanhSachCacSanPham.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\display\SanPham\DanhSachCacSanPham.ascx.designer.cs">
+      <DependentUpon>DanhSachCacSanPham.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\display\SanPham\GioHang.ascx.cs">
+      <DependentUpon>GioHang.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\display\SanPham\GioHang.ascx.designer.cs">
+      <DependentUpon>GioHang.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\display\SanPham\SanPhamLoadControl.ascx.cs">
+      <DependentUpon>SanPhamLoadControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\display\SanPham\SanPhamLoadControl.ascx.designer.cs">
+      <DependentUpon>SanPhamLoadControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\display\SanPham\TrangChuModulSanPham.ascx.cs">
+      <DependentUpon>TrangChuModulSanPham.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\display\SanPham\TrangChuModulSanPham.ascx.designer.cs">
+      <DependentUpon>TrangChuModulSanPham.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\display\ThanhVien\DangKy.ascx.cs">
+      <DependentUpon>DangKy.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\display\ThanhVien\DangKy.ascx.designer.cs">
+      <DependentUpon>DangKy.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\display\ThanhVien\DangNhap.ascx.cs">
+      <DependentUpon>DangNhap.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\display\ThanhVien\DangNhap.ascx.designer.cs">
+      <DependentUpon>DangNhap.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\display\ThanhVien\ThanhVienLoadControl.ascx.cs">
+      <DependentUpon>ThanhVienLoadControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\display\ThanhVien\ThanhVienLoadControl.ascx.designer.cs">
+      <DependentUpon>ThanhVienLoadControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\display\TinTuc\ChiTietTinTuc.ascx.cs">
+      <DependentUpon>ChiTietTinTuc.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\display\TinTuc\ChiTietTinTuc.ascx.designer.cs">
+      <DependentUpon>ChiTietTinTuc.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\display\TinTuc\DanhSachCacTinTuc.ascx.cs">
+      <DependentUpon>DanhSachCacTinTuc.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\display\TinTuc\DanhSachCacTinTuc.ascx.designer.cs">
+      <DependentUpon>DanhSachCacTinTuc.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\display\TinTuc\TinTucLoadControl.ascx.cs">
+      <DependentUpon>TinTucLoadControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\display\TinTuc\TinTucLoadControl.ascx.designer.cs">
+      <DependentUpon>TinTucLoadControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\display\TinTuc\TrangChuModulTinTuc.ascx.cs">
+      <DependentUpon>TrangChuModulTinTuc.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\display\TinTuc\TrangChuModulTinTuc.ascx.designer.cs">
+      <DependentUpon>TrangChuModulTinTuc.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\display\TrangChu\TrangChuLoadControl.ascx.cs">
+      <DependentUpon>TrangChuLoadControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\display\TrangChu\TrangChuLoadControl.ascx.designer.cs">
+      <DependentUpon>TrangChuLoadControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -1477,7 +1597,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="cms\display\" />
     <Folder Include="pic\QuangCao\" />
     <Folder Include="pic\SanPham\" />
     <Folder Include="pic\TinTuc\" />

@@ -1,0 +1,2 @@
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="TinTucLoadControl.ascx.cs" Inherits="ASPWebForm_emdep.vn.cms.display.TinTuc.TinTucLoadControl" %>
+<asp:PlaceHolder ID="plLoadControl" runat="server"></asp:PlaceHolder>
