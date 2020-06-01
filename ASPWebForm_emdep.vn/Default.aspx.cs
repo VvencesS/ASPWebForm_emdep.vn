@@ -20,9 +20,22 @@ namespace ASPWebForm_emdep.vn
                 ltrLogo.Text = LayLogo();
                 ltrBanner.Text = LayBanner();
                 ltrMenu.Text = LayMenu();
-
+                ltrDanhMucSanPham.Text = LayDanhMucSanPham();
             }
         }
+        #region Lấy danh mục sản phẩm
+        private string LayDanhMucSanPham()
+        {
+            string s = "";
+            DataTable dt = new DataTable();
+            dt = ASPWebForm_emdep.vn.App_Code.Database.DanhMuc.Thongtin_Danhmuc_by_MaDMCha("0");
+            for (int i = 0; i < dt.Rows.Count; i++)
+            {
+                s += @"<li><a href='/Default.aspx?modul=SanPham&modulphu=DanhSachSanPham&id=" + dt.Rows[i]["MaDM"] + @"' title='" + dt.Rows[i]["TenDM"] + @"'>" + dt.Rows[i]["TenDM"] + @"</a></li>";
+            }
+            return s;
+        }
+        #endregion
         #region Lấy menu
         private string LayMenu()
         {

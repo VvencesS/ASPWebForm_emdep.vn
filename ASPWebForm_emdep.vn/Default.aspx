@@ -81,9 +81,7 @@
                             <div class="daumuc"><a>DANH MỤC SẢN PHẨM</a></div>
                             <div class="ditmuc">
                                 <ul>
-                                    <li><a href="#" title="ÁO">ÁO</a></li>
-                                    <li><a href="#" title="ĐẦM">ĐẦM</a></li>
-                                    <li><a href="#" title="QUẦN">QUẦN</a></li>
+                                    <asp:Literal ID="ltrDanhMucSanPham" runat="server"></asp:Literal>
                                 </ul>
                             </div>
                         </div>
