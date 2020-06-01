@@ -39,7 +39,7 @@ namespace ASPWebForm_emdep.vn.App_Code.Database
         /// <param name="MaDM"></param>
         public static void TinTuc_Inser(
             string TieuDe, string AnhDaiDien, string MoTa,
-            string NgayDang, string LuotXem, string ChiTiet,
+            DateTime NgayDang, string LuotXem, string ChiTiet,
             string ThuTu, string MaDM)
         {
             SqlCommand cmd = new SqlCommand("tintuc_inser");
@@ -70,7 +70,7 @@ namespace ASPWebForm_emdep.vn.App_Code.Database
         /// <param name="ChiTiet"></param>
         /// <param name="ThuTu"></param>
         /// <param name="MaDM"></param>
-        public static void TinTuc_Update(string TinTucID, string TieuDe, string AnhDaiDien, string MoTa, string NgayDang, string LuotXem, string ChiTiet, string ThuTu, string MaDM)
+        public static void TinTuc_Update(string TinTucID, string TieuDe, string AnhDaiDien, string MoTa, DateTime NgayDang, string LuotXem, string ChiTiet, string ThuTu, string MaDM)
         {
             SqlCommand cmd = new SqlCommand("tintuc_update");
             cmd.CommandType = CommandType.StoredProcedure;

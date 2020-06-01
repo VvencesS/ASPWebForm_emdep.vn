@@ -942,6 +942,7 @@
     <Content Include="cms\admin\js\jquery-3.1.1.min.js" />
     <Content Include="cms\admin\KhachHang\KhachHangLoadControl.ascx" />
     <Content Include="cms\admin\KhachHang\KhachHang_HienThi.ascx" />
+    <Content Include="cms\admin\Menu\Ajax\Menu.aspx" />
     <Content Include="cms\admin\Menu\MenuLoadControl.ascx" />
     <Content Include="cms\admin\Menu\Menu_HienThi.ascx" />
     <Content Include="cms\admin\Menu\Menu_ThemMoi.ascx" />
@@ -1056,6 +1057,13 @@
     </Compile>
     <Compile Include="cms\admin\KhachHang\KhachHang_HienThi.ascx.designer.cs">
       <DependentUpon>KhachHang_HienThi.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\admin\Menu\Ajax\Menu.aspx.cs">
+      <DependentUpon>Menu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\admin\Menu\Ajax\Menu.aspx.designer.cs">
+      <DependentUpon>Menu.aspx</DependentUpon>
     </Compile>
     <Compile Include="cms\admin\Menu\MenuLoadControl.ascx.cs">
       <DependentUpon>MenuLoadControl.ascx</DependentUpon>

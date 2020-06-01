@@ -57,7 +57,7 @@ namespace ASPWebForm_emdep.vn.cms.admin.TinTuc.DanhSachTinTuc
                 cbThemNhieuDanhMuc.Visible = true;
                 tbLuotXem.Text = "0";
                 tbThuTu.Text = "1";
-                tbNgayDang.Text = DateTime.Now.ToString("MM/dd/yyyy hh:mm:ss tt");
+                tbNgayDang.Text = DateTime.Now.ToString("yyyy/MM/dd hh:mm:ss tt");
             }
 
         }
@@ -105,7 +105,7 @@ namespace ASPWebForm_emdep.vn.cms.admin.TinTuc.DanhSachTinTuc
 
                 ASPWebForm_emdep.vn.App_Code.Database.TinTuc.TinTuc_Inser(
                     tbTieuDe.Text, flAnhDaiDien.FileName, tbMoTa.Text,
-                    tbNgayDang.Text, tbLuotXem.Text, tbChiTiet.Text,
+                    DateTime.Parse(tbNgayDang.Text), tbLuotXem.Text, tbChiTiet.Text,
                     tbThuTu.Text, ddlDanhMucCha.SelectedValue);
                 ltrThongBao.Text = "<div class='thongBaoTaoThanhCong' style='color:#ff006e;font-size:16px;padding-bottom:20px;text-align:center;font-weight:bold'>Đã tạo tin tức mới</div>";
 
@@ -146,7 +146,7 @@ namespace ASPWebForm_emdep.vn.cms.admin.TinTuc.DanhSachTinTuc
 
                 ASPWebForm_emdep.vn.App_Code.Database.TinTuc.TinTuc_Update(
                     id, tbTieuDe.Text, tenAnhDaiDien, tbMoTa.Text,
-                    tbNgayDang.Text, tbLuotXem.Text, tbChiTiet.Text,
+                    DateTime.Parse(tbNgayDang.Text), tbLuotXem.Text, tbChiTiet.Text,
                     tbThuTu.Text, ddlDanhMucCha.SelectedValue);
 
                 //đẩy trang về trang danh sách các damnh mục đã tạo
@@ -162,7 +162,7 @@ namespace ASPWebForm_emdep.vn.cms.admin.TinTuc.DanhSachTinTuc
             tbChiTiet.Text = "";
             tbThuTu.Text = "";
             tbLuotXem.Text = "";
-            tbNgayDang.Text = DateTime.Now.ToString("MM/dd/yyyy hh:mm:ss tt");
+            tbNgayDang.Text = DateTime.Now.ToString("yyyy/MM/dd hh:mm:ss tt");
             tbMoTa.Text = "";
         }
         protected void btHuy_Click(object sender, EventArgs e)
