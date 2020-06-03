@@ -95,7 +95,7 @@ namespace ASPWebForm_emdep.vn.App_Code.Database
         {
             SqlCommand cmd = new SqlCommand("thongtin_danhmuctin_by_id");
             cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("@MaMD", MaDM);
+            cmd.Parameters.AddWithValue("@MaDM", MaDM);
             return SQLDatabase.GetData(cmd);
         }
         #endregion

@@ -77,14 +77,26 @@
             <div id="thantrang">
                 <div class="contener">
                     <div id="trangtrai">
-                        <div id="danhmuc">
-                            <div class="daumuc"><a>DANH MỤC SẢN PHẨM</a></div>
-                            <div class="ditmuc">
-                                <ul>
-                                    <asp:Literal ID="ltrDanhMucSanPham" runat="server"></asp:Literal>
-                                </ul>
+                        <asp:PlaceHolder ID="plDanhMucSanPham" runat="server">
+                            <div id="danhmuc">
+                                <div class="daumuc"><a>DANH MỤC SẢN PHẨM</a></div>
+                                <div class="ditmuc">
+                                    <ul>
+                                        <asp:Literal ID="ltrDanhMucSanPham" runat="server"></asp:Literal>
+                                    </ul>
+                                </div>
                             </div>
-                        </div>
+                        </asp:PlaceHolder>
+                        <asp:PlaceHolder ID="plDanhMucTinTuc" runat="server" Visible="False">
+                            <div id="danhmuc">
+                                <div class="daumuc"><a>DANH MỤC TIN TỨC</a></div>
+                                <div class="ditmuc">
+                                    <ul>
+                                        <asp:Literal ID="ltrDanhMucTinTuc" runat="server"></asp:Literal>
+                                    </ul>
+                                </div>
+                            </div>
+                        </asp:PlaceHolder>
                         <div id="hotro">
                             <div id="pichotro">
                                 <div class="logohotro">

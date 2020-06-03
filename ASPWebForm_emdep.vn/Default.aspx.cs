@@ -10,8 +10,24 @@ namespace ASPWebForm_emdep.vn
 {
     public partial class Default : System.Web.UI.Page
     {
+        private string modul = "";
         protected void Page_Load(object sender, EventArgs e)
         {
+            #region Nếu là modul tin tức --> Hiện danh mục tin., Các modul khác --> Hiện danh mục sản phẩm
+            if (Request.QueryString["modul"] != null)
+                modul = Request.QueryString["modul"];
+
+            if (modul == "TinTuc")
+            {
+                plDanhMucTinTuc.Visible = true;
+                plDanhMucSanPham.Visible = false;
+            }
+            else
+            {
+                plDanhMucTinTuc.Visible = false;
+                plDanhMucSanPham.Visible = true;
+            }
+            #endregion
             if (!IsPostBack)
             {
                 
@@ -21,8 +37,22 @@ namespace ASPWebForm_emdep.vn
                 ltrBanner.Text = LayBanner();
                 ltrMenu.Text = LayMenu();
                 ltrDanhMucSanPham.Text = LayDanhMucSanPham();
+                ltrDanhMucTinTuc.Text = LayDanhMucTinTuc();
             }
         }
+        #region Lấy danh mục tin tức
+        private string LayDanhMucTinTuc()
+        {
+            string s = "";
+            DataTable dt = new DataTable();
+            dt = ASPWebForm_emdep.vn.App_Code.Database.DanhMucTin.Thongtin_DanhmucTin_by_MaDMCha("0");
+            for (int i = 0; i < dt.Rows.Count; i++)
+            {
+                s += @"<li><a href='/Default.aspx?modul=TinTuc&modulphu=DanhSachTinTuc&id=" + dt.Rows[i]["MaDM"] + @"' title='" + dt.Rows[i]["TenDM"] + @"'>" + dt.Rows[i]["TenDM"] + @"</a></li>";
+            }
+            return s;
+        }
+        #endregion
         #region Lấy danh mục sản phẩm
         private string LayDanhMucSanPham()
         {
