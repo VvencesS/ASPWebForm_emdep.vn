@@ -41,3 +41,51 @@
         <asp:Literal ID="ltrThongTinChiTiet" runat="server"></asp:Literal>
     </div>
 </div>
+
+<%--Các script xử lý giỏ hàng--%>
+<script type="text/javascript">
+    function ThemVaoGioHang() {
+        var id = "<%=id%>";
+        var soLuong = $("#quantity").val();
+
+        $.post("cms/display/SanPham/Ajax/XuLyGioHang.aspx",
+         {
+             "ThaoTac": "ThemVaoGioHang",
+             "id": id,
+             "soLuong": soLuong
+         },
+         function (data, status) {
+             //alert("Data :" + data + "\n Status :" + status);
+             if (data == "") {
+                 //thực hiện thành công => thông báo
+                 alert("Đã thêm sản phẩm vào giỏ hàng thành công");
+             } else {
+                 alert(data);
+             }
+         });
+    }
+
+    function MuaNgay() {
+        var id = "<%=id%>";
+        var soLuong = $("#quantity").val();
+
+        $.post("cms/display/SanPham/Ajax/XuLyGioHang.aspx",
+         {
+             "ThaoTac": "ThemVaoGioHang",
+             "id": id,
+             "soLuong": soLuong
+         },
+         function (data, status) {
+             //alert("Data :" + data + "\n Status :" + status);
+             if (data == "") {
+                 //thực hiện thành công => thông báo
+                 alert("Đã thêm sản phẩm vào giỏ hàng thành công");
+
+                 //Đẩy về trang hiển thị giỏ hàng
+                 location.href = "/Default.aspx?modul=SanPham&modulphu=GioHang";
+             } else {
+                 alert(data);
+             }
+         });
+    }
+</script>

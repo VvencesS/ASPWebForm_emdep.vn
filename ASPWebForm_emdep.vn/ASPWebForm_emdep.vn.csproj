@@ -1001,6 +1001,7 @@
     <Content Include="cms\admin\TinTuc\DanhSachTinTuc\DanhSachTinTuc_ThemMoi.ascx" />
     <Content Include="cms\admin\TinTuc\TinTucLoadControl.ascx" />
     <Content Include="cms\display\DisplayLoadControl.ascx" />
+    <Content Include="cms\display\SanPham\Ajax\XuLyGioHang.aspx" />
     <Content Include="cms\display\SanPham\ChiTietSanPham.ascx" />
     <Content Include="cms\display\SanPham\DanhSachCacSanPham.ascx" />
     <Content Include="cms\display\SanPham\GioHang.ascx" />
@@ -1594,6 +1595,13 @@
     </Compile>
     <Compile Include="cms\display\DisplayLoadControl.ascx.designer.cs">
       <DependentUpon>DisplayLoadControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="cms\display\SanPham\Ajax\XuLyGioHang.aspx.cs">
+      <DependentUpon>XuLyGioHang.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\display\SanPham\Ajax\XuLyGioHang.aspx.designer.cs">
+      <DependentUpon>XuLyGioHang.aspx</DependentUpon>
     </Compile>
     <Compile Include="cms\display\SanPham\ChiTietSanPham.ascx.cs">
       <DependentUpon>ChiTietSanPham.ascx</DependentUpon>
