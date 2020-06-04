@@ -64,7 +64,7 @@
                         </div>
                         <div class="timkiemphai">
                             <div class="giohang">
-                                <div id="cart"></div>
+                                <a id="cart" style="display: inline-block" href="/Default.aspx?modul=SanPham&modulphu=GioHang"></a>
                             </div>
                             <div class="hotline">
                                 <div class="label">HOTLINE</div>
@@ -72,7 +72,7 @@
                             </div>
                             <div class="otimkiem">
                                 <div class="search">
-                                    <div id="searchForm" name="searchForm" >
+                                    <div id="searchForm" name="searchForm">
                                         <input type="text" class="key" placeholder="Từ khóa tìm kiếm" value="" name="pr_name" id="keysearch">
                                         <input type="submit" value="Tìm kiếm" class="submit">
                                     </div>

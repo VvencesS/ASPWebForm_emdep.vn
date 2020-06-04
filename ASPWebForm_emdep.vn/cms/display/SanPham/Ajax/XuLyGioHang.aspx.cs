@@ -19,7 +19,65 @@ namespace ASPWebForm_emdep.vn.cms.display.SanPham.Ajax
                 case "ThemVaoGioHang":
                     ThemVaoGioHang();
                     break;
+                case "LayThongTinGioHang":
+                    LayThongTinGioHang();
+                    break;
             }
+        }
+        private void LayThongTinGioHang()
+        {
+            string ketQua = "";
+
+            //Nếu tồn tại giỏ hàng thì mới lấy ra kết quả
+            if (Session["GioHang"] != null)
+            {
+                //Khai báo datatable để chứa giỏ hàng
+                DataTable dtGioHang = new DataTable();
+                dtGioHang = (DataTable)Session["GioHang"];
+
+                ketQua += @"
+                <table style='width:100%;' id='cart-table'>
+                    <tbody>
+                        <tr>
+                            <th></th>
+                            <th>Tên sản phẩm</th>
+                            <th>Số lượng</th>
+                            <th>Đơn giá</th>
+                            <th></th>
+                        </tr>
+                        <tr class='line-item original'>
+                            <td class='item-image'></td>
+                            <td class='item-title'>
+                                <a></a>
+                            </td>
+                            <td class='item-quantity'></td>
+                            <td class='item-price'></td>
+                            <td class='item-delete'></td>
+                        </tr>";
+
+                                //Chạy vòng lặp và xuất dữ liệu trong giỏ hàng ra dạng bảng
+                                for (int i = 0; i < dtGioHang.Rows.Count; i++)
+                                {
+                                    ketQua += @"
+                        <tr class='line-item' id='tr_" + dtGioHang.Rows[i]["MaSP"] + @"'>
+                            <td class='item-image'><img class='anhSPGioHang' src='pic/SanPham/" + dtGioHang.Rows[i]["AnhSP"] + @"' /></td>
+                            <td class='item-title'>
+                                <a href='/Default.aspx?modul=SanPham&modulphu=ChiTietSanPham&id=" + dtGioHang.Rows[i]["MaSP"] + @"'>" + dtGioHang.Rows[i]["TenSP"] + @"</a>
+                            </td>
+                            <td class='item-quantity'><input onchange='CapNhatSoLuongVaoGioHang(" + dtGioHang.Rows[i]["MaSP"] + @")' id='quantity_" + dtGioHang.Rows[i]["MaSP"] + @"' name='updates[]' min='1' type='number' value='" + dtGioHang.Rows[i]["SoLuong"] + @"' class=''></td>
+                            <td class='item-price'>" + dtGioHang.Rows[i]["GiaSP"] + @"</td>
+                            <td class='item-delete'><a href='javascript://' onclick='XoaSPTrongGioHang(" + dtGioHang.Rows[i]["MaSP"] + @")'>Xóa</a></td>
+                        </tr>
+                ";
+                }
+
+                ketQua += @"
+                    </tbody>
+                </table>
+                ";
+            }
+
+            Response.Write(ketQua);
         }
         private void ThemVaoGioHang()
         {
