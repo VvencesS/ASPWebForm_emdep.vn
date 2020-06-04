@@ -51,6 +51,42 @@ namespace ASPWebForm_emdep.vn
         protected global::System.Web.UI.WebControls.Literal ltrMenu;
 
         /// <summary>
+        /// plChuaDangNhap control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.PlaceHolder plChuaDangNhap;
+
+        /// <summary>
+        /// plDaDangNhap control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.PlaceHolder plDaDangNhap;
+
+        /// <summary>
+        /// lbtDangXuat control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton lbtDangXuat;
+
+        /// <summary>
+        /// ltrTenKhachHang control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal ltrTenKhachHang;
+
+        /// <summary>
         /// plDanhMucSanPham control.
         /// </summary>
         /// <remarks>

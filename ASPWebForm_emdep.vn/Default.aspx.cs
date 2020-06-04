@@ -30,8 +30,24 @@ namespace ASPWebForm_emdep.vn
             #endregion
             if (!IsPostBack)
             {
-                
-                
+                #region Kiểm tra đã đăng nhập hay chưa
+
+                if (Session["KhachHang"] != null && Session["KhachHang"].ToString() == "1")
+                {
+                    //Đã đăng nhập
+                    plDaDangNhap.Visible = true;
+                    plChuaDangNhap.Visible = false;
+
+                    if (Session["KhachHang"] != null)
+                        ltrTenKhachHang.Text = Session["TenKh"].ToString();
+                }
+                else
+                {
+                    plDaDangNhap.Visible = false;
+                    plChuaDangNhap.Visible = true;
+                }
+                #endregion
+
 
                 ltrLogo.Text = LayLogo();
                 ltrBanner.Text = LayBanner();
@@ -162,5 +178,20 @@ namespace ASPWebForm_emdep.vn
             return s;
         }
         #endregion
+        protected void lbtDangXuat_Click(object sender, EventArgs e)
+        {
+            //Xóa các session đã lưu
+            Session["KhachHang"] = null;
+
+            Session["MaKH"] = null;
+            Session["TenKh"] = null;
+            Session["DiaChiKH"] = null;
+            Session["sdtKH"] = null;
+            Session["EmailKH"] = null;
+
+            //đẩy về trang đăng nhập
+            Response.Redirect("/Default.aspx");
+        }
     }
+    
 }

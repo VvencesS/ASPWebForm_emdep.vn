@@ -37,10 +37,20 @@
                         </ul>
                     </div>
                     <div id="dangnhap">
-                        <ul>
-                            <li class="dangnhap1">/<a href="Default.aspx?modul=ThanhVien&modulphu=DangKy">Đăng ký</a></li>
-                            <li class="dangnhap2"><a href="Default.aspx?modul=ThanhVien&modulphu=DangNhap">Đăng nhập</a></li>
-                        </ul>
+                        <asp:PlaceHolder ID="plChuaDangNhap" runat="server">
+                            <ul>
+                                <li class="dangnhap1">/<a href="Default.aspx?modul=ThanhVien&modulphu=DangKy">Đăng ký</a></li>
+                                <li class="dangnhap2"><a href="Default.aspx?modul=ThanhVien&modulphu=DangNhap">Đăng nhập</a></li>
+                            </ul>
+                        </asp:PlaceHolder>
+
+                        <asp:PlaceHolder ID="plDaDangNhap" runat="server" Visible="False">
+                            <ul>
+                                <li class="dangnhap1">/<asp:LinkButton ID="lbtDangXuat" runat="server" CausesValidation="False" OnClick="lbtDangXuat_Click">Đăng xuất</asp:LinkButton></li>
+                                <li class="dangnhap2">
+                                    <asp:Literal ID="ltrTenKhachHang" runat="server"></asp:Literal></li>
+                            </ul>
+                        </asp:PlaceHolder>
                     </div>
                 </div>
             </div>
@@ -62,10 +72,10 @@
                             </div>
                             <div class="otimkiem">
                                 <div class="search">
-                                    <form onsubmit="return checksearchForm();" id="searchForm" name="searchForm" method="post" action="">
+                                    <div id="searchForm" name="searchForm" >
                                         <input type="text" class="key" placeholder="Từ khóa tìm kiếm" value="" name="pr_name" id="keysearch">
                                         <input type="submit" value="Tìm kiếm" class="submit">
-                                    </form>
+                                    </div>
                                 </div>
                             </div>
                         </div>
