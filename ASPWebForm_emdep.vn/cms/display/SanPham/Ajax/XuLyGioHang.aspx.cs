@@ -22,7 +22,110 @@ namespace ASPWebForm_emdep.vn.cms.display.SanPham.Ajax
                 case "LayThongTinGioHang":
                     LayThongTinGioHang();
                     break;
+                case "LayTongSoSanPhamTrongGioHang":
+                    LayTongSoSanPhamTrongGioHang();
+                    break;
+                case "LayTongTienTrongGioHang":
+                    LayTongTienTrongGioHang();
+                    break;
+                case "XoaSPTrongGioHang":
+                    XoaSPTrongGioHang();
+                    break;
+                case "CapNhatSoLuongVaoGioHang":
+                    CapNhatSoLuongVaoGioHang();
+                    break;
             }
+        }
+        private void CapNhatSoLuongVaoGioHang()
+        {
+            //Lấy id sản phẩm cần loại khỏi giỏ hàng
+            string idSanPham = Request.Params["idSanPham"];
+            string soLuongMoi = Request.Params["soLuongMoi"];
+
+            //Nếu tồn tại giỏ hàng thì mới lấy ra kết quả
+            if (Session["GioHang"] != null)
+            {
+                //Khai báo datatable để chứa giỏ hàng
+                DataTable dtGioHang = new DataTable();
+                dtGioHang = (DataTable)Session["GioHang"];
+
+                //Lặp qua danh sách sản phẩm trong giỏ hàng --> Cập nhật số lượng cho sản phẩm theo id được yêu cầu
+                for (int i = 0; i < dtGioHang.Rows.Count; i++)
+                {
+                    if (dtGioHang.Rows[i]["MaSP"].ToString() == idSanPham)
+                        dtGioHang.Rows[i]["SoLuong"] = soLuongMoi;
+                }
+
+                //Gán lại vào session
+                Session["GioHang"] = dtGioHang;
+            }
+
+            Response.Write("");
+        }
+        private void XoaSPTrongGioHang()
+        {
+            //Lấy id sản phẩm cần loại khỏi giỏ hàng
+            string idSanPham = Request.Params["idSanPham"];
+
+            //Nếu tồn tại giỏ hàng thì mới lấy ra kết quả
+            if (Session["GioHang"] != null)
+            {
+                //Khai báo datatable để chứa giỏ hàng
+                DataTable dtGioHang = new DataTable();
+                dtGioHang = (DataTable)Session["GioHang"];
+
+                //Lặp qua danh sách sản phẩm trong giỏ hàng --> Loại sản phẩm theo id truyền lên
+                for (int i = 0; i < dtGioHang.Rows.Count; i++)
+                {
+                    if (dtGioHang.Rows[i]["MaSP"].ToString() == idSanPham)
+                        dtGioHang.Rows[i].Delete();
+                }
+
+                //Gán lại vào session
+                Session["GioHang"] = dtGioHang;
+            }
+
+            Response.Write("");
+        }
+        private void LayTongTienTrongGioHang()
+        {
+            double tongTien = 0;
+
+            //Nếu tồn tại giỏ hàng thì mới lấy ra kết quả
+            if (Session["GioHang"] != null)
+            {
+                //Khai báo datatable để chứa giỏ hàng
+                DataTable dtGioHang = new DataTable();
+                dtGioHang = (DataTable)Session["GioHang"];
+
+                //Chạy vòng lặp và tính ra tổng tiền (Thành tiền = Số lượng * Đơn giá)
+                for (int i = 0; i < dtGioHang.Rows.Count; i++)
+                {
+                    tongTien += int.Parse(dtGioHang.Rows[i]["SoLuong"].ToString()) * double.Parse(dtGioHang.Rows[i]["GiaSP"].ToString());
+                }
+            }
+
+            Response.Write(tongTien);
+        }
+        private void LayTongSoSanPhamTrongGioHang()
+        {
+            int tongSo = 0;
+
+            //Nếu tồn tại giỏ hàng thì mới lấy ra kết quả
+            if (Session["GioHang"] != null)
+            {
+                //Khai báo datatable để chứa giỏ hàng
+                DataTable dtGioHang = new DataTable();
+                dtGioHang = (DataTable)Session["GioHang"];
+
+                //Chạy vòng lặp và đếm tổng số sản phẩm trong giỏ hàng
+                for (int i = 0; i < dtGioHang.Rows.Count; i++)
+                {
+                    tongSo += int.Parse(dtGioHang.Rows[i]["SoLuong"].ToString());
+                }
+            }
+
+            Response.Write(tongSo);
         }
         private void LayThongTinGioHang()
         {

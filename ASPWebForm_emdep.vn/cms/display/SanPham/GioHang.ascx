@@ -57,7 +57,7 @@
                     </div>
                     <div class="col-lg-4">
                         <div class="modal-note">
-                            <input id="tbHoTen" type="text" value="<%=hoTen %>" />
+                            <input id="tbHoTen" type="text" value="" />
                         </div>
                     </div>
                     <div class="cb"></div>
@@ -71,7 +71,7 @@
                     </div>
                     <div class="col-lg-4">
                         <div class="modal-note">
-                            <input id="tbDiaChi" type="text" value="<%=diaChi %>" />
+                            <input id="tbDiaChi" type="text" value="" />
                         </div>
                     </div>
                     <div class="cb"></div>
@@ -85,7 +85,7 @@
                     </div>
                     <div class="col-lg-4">
                         <div class="modal-note">
-                            <input id="tbSoDienThoai" type="text" value="<%=soDienThoai %>" />
+                            <input id="tbSoDienThoai" type="text" value="" />
                         </div>
                     </div>
                     <div class="cb"></div>
@@ -99,12 +99,12 @@
                     </div>
                     <div class="col-lg-4">
                         <div class="modal-note">
-                            <input id="tbEmail" type="text" value="<%=email %>" />
+                            <input id="tbEmail" type="text" value="" />
                         </div>
                     </div>
                     <div class="cb"></div>
                 </div>
-            </div>
+            </div>--%>
 
             <div class="cb" style="padding-right: 10px">
                 <div class="total-price-modal">
@@ -112,7 +112,7 @@
                 </div>
             </div>
 
-            <div class="CacHinhThucThanhToan">
+            <%--<div class="CacHinhThucThanhToan">
                 <div class="goiY">
                     Quý khách vui lòng chọn một trong các hình thức thanh toán dưới đây để thanh toán cho đơn hàng của mình
                 </div>
@@ -171,7 +171,7 @@
                     Postcode(zip code): 1234<br />
                     Country: VietNam
                 </div>
-            </div>
+            </div>--%>
 
             <div class="row" style="margin-top: 10px;">
                 <div class="col-lg-6">
@@ -189,7 +189,7 @@
                 </div>
             </div>
 
-        </div>--%>
+        </div>
 
     </div>
 </div>
@@ -205,5 +205,77 @@
                 $("#BangThongTinGioHang").html(data);
             });
     }
-    LayThongTinGioHang();
+    function LayTongSoSanPhamTrongGioHang() {
+        $.post("cms/display/SanPham/Ajax/XuLyGioHang.aspx",
+            {
+                "ThaoTac": "LayTongSoSanPhamTrongGioHang"
+            },
+            function (data, status) {
+                //alert("Data :" + data + "\n Status :" + status);
+                $(".TongSoSPTrongGioHang").html(data);
+            });
+    }
+    function LayTongTienTrongGioHang() {
+        $.post("cms/display/SanPham/Ajax/XuLyGioHang.aspx",
+            {
+                "ThaoTac": "LayTongTienTrongGioHang"
+            },
+            function (data, status) {
+                //alert("Data :" + data + "\n Status :" + status);
+                $(".TongTienTrongGioHang").html(data);
+            });
+    }
+
+    //Gọi hàm lần đầu để khi load trang sẽ lấy ra thông tin luôn
+    $(document)
+        .ready(function () {
+            LayThongTinGioHang();
+            LayTongSoSanPhamTrongGioHang();
+            LayTongTienTrongGioHang();
+        });
+    //Hàm xóa 1 sản phẩm trong giỏ hàng
+    function XoaSPTrongGioHang(idSanPham) {
+        //Hỏi để xác nhận lại yêu cầu xóa từ người dùng
+        if (confirm("Bạn muốn xóa sản phẩm này khỏi giỏ hàng?")) {
+
+            $.post("cms/display/SanPham/Ajax/XuLyGioHang.aspx",
+                {
+                    "ThaoTac": "XoaSPTrongGioHang",
+                    "idSanPham": idSanPham
+                },
+                function (data, status) {
+                    //alert("Data :" + data + "\n Status :" + status);
+
+                    //Nếu không có lỗi (tức là xóa thành công) --> ẩn dòng chứa sản phẩm khỏi bảng hiển thị giỏ hàng --> Gọi hàm cập nhật số lượng, tổng tiền
+                    if (data === "") {
+                        $("#tr_" + idSanPham).remove();
+
+                        LayTongSoSanPhamTrongGioHang();
+                        LayTongTienTrongGioHang();
+                    }
+                });
+        }
+    }
+    //Hàm cập nhật số lượng cho một sản phẩm trong giỏ hàng
+    function CapNhatSoLuongVaoGioHang(idSanPham) {
+
+        //Lấy số lượng mới sửa từ textbox
+        var soLuongMoi = $("#quantity_" + idSanPham).val();
+
+        $.post("cms/display/SanPham/Ajax/XuLyGioHang.aspx",
+            {
+                "ThaoTac": "CapNhatSoLuongVaoGioHang",
+                "idSanPham": idSanPham,
+                "soLuongMoi": soLuongMoi
+            },
+            function (data, status) {
+                //alert("Data :" + data + "\n Status :" + status);
+
+                //Nếu không có lỗi (tức là xóa thành công) --> ẩn dòng chứa sản phẩm khỏi bảng hiển thị giỏ hàng --> Gọi hàm cập nhật số lượng, tổng tiền
+                if (data === "") {
+                    LayTongSoSanPhamTrongGioHang();
+                    LayTongTienTrongGioHang();
+                }
+            });
+    }
 </script>
