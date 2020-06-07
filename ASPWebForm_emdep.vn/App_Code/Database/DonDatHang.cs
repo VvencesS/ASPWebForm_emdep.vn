@@ -38,7 +38,7 @@ namespace ASPWebForm_emdep.vn.App_Code.Database
         /// <param name="sdtkh"></param>
         /// <param name="emailkh"></param>
         /// <param name="ret"></param>
-        public static void Dondathang_Inser(string ngaytao, string thanhtienhd, string tinhtrangdonhang, string makh, string tenkh, string sdtkh, string emailkh, string ret)
+        public static void Dondathang_Inser(DateTime ngaytao, string thanhtienhd, string tinhtrangdonhang, string makh, string tenkh, string sdtkh, string emailkh, string ret)
         {
             SqlCommand cmd = new SqlCommand("dondathang_inser");
             cmd.CommandType = CommandType.StoredProcedure;

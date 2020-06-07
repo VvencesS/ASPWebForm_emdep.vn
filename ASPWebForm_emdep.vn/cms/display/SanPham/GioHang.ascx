@@ -1,6 +1,6 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="GioHang.ascx.cs" Inherits="ASPWebForm_emdep.vn.cms.display.SanPham.GioHang" %>
 <link href="../../../css/gio-hang.css" rel="stylesheet" />
-<script src="../../../js/jquery-1.8.3.min.js"></script>
+
 <div class="modal-content">
     <div class="modal-header">
         <h4 class="modal-title" id="exampleModalLabel">Bạn có <span class="TongSoSPTrongGioHang">0</span> sản phẩm trong giỏ hàng.</h4>
@@ -45,10 +45,12 @@
                 </tbody>
             </table>--%>
         </div>
-        <%--<div class="modal-footer">
+        <div class="modal-footer">
             <div class="dienThongTinDatHang">
-                <div class="goiY">Quý khách vui lòng điền đầy đủ thông tin theo form phía dưới và nhấn nút Đặt hàng.<br />
-                    Lưu ý: Nếu quý khách điền vào ô Email thì hệ thống sẽ kiểm tra và tạo cho quý khách một tài khoản thành viên với tên đăng nhập và mật khẩu chính là email của quý khách để quý khách có thể đặt hàng dễ dàng hơn ở lần sau.</div>
+                <div class="goiY">
+                    Quý khách vui lòng điền đầy đủ thông tin theo form phía dưới và nhấn nút Đặt hàng.<br />
+                    Lưu ý: Nếu quý khách điền vào ô Email thì hệ thống sẽ kiểm tra và tạo cho quý khách một tài khoản thành viên với tên đăng nhập và mật khẩu chính là email của quý khách để quý khách có thể đặt hàng dễ dàng hơn ở lần sau.
+                </div>
                 <div class="row">
                     <div class="col-lg-3">
                         <div class="modal-title-note">
@@ -57,7 +59,7 @@
                     </div>
                     <div class="col-lg-4">
                         <div class="modal-note">
-                            <input id="tbHoTen" type="text" value="" />
+                            <input id="tbHoTen" type="text" value="<%=hoTen %>" />
                         </div>
                     </div>
                     <div class="cb"></div>
@@ -71,7 +73,7 @@
                     </div>
                     <div class="col-lg-4">
                         <div class="modal-note">
-                            <input id="tbDiaChi" type="text" value="" />
+                            <input id="tbDiaChi" type="text" value="<%=diaChi %>" />
                         </div>
                     </div>
                     <div class="cb"></div>
@@ -85,7 +87,7 @@
                     </div>
                     <div class="col-lg-4">
                         <div class="modal-note">
-                            <input id="tbSoDienThoai" type="text" value="" />
+                            <input id="tbSoDienThoai" type="text" value="<%=soDienThoai %>" />
                         </div>
                     </div>
                     <div class="cb"></div>
@@ -99,12 +101,12 @@
                     </div>
                     <div class="col-lg-4">
                         <div class="modal-note">
-                            <input id="tbEmail" type="text" value="" />
+                            <input id="tbEmail" type="text" value="<%=email %>" />
                         </div>
                     </div>
                     <div class="cb"></div>
                 </div>
-            </div>--%>
+            </div>
 
             <div class="cb" style="padding-right: 10px">
                 <div class="total-price-modal">
@@ -193,6 +195,7 @@
 
     </div>
 </div>
+<script src="../../../js/jquery-1.8.3.min.js"></script>
 <script type="text/javascript">
     //Viết ajax lấy thông tin giỏ hàng từ session
     function LayThongTinGioHang() {
@@ -277,5 +280,35 @@
                     LayTongTienTrongGioHang();
                 }
             });
+    }
+    //Hàm gửi đơn hàng
+    function GuiDonHang() {
+        //Kiểm tra xem khách hàng đã nhập đủ họ tên và số điện thoại chưa
+        if ($("#tbHoTen").val() !== "" && $("#tbSoDienThoai").val() !== "") {
+
+            
+
+            $.post("cms/display/SanPham/Ajax/XuLyGioHang.aspx",
+                {
+                    "ThaoTac": "GuiDonHang",
+                    "hoTen": $("#tbHoTen").val(),
+                    "diaChi": $("#tbDiaChi").val(),
+                    "soDienThoai": $("#tbSoDienThoai").val(),
+                    "email": $("#tbEmail").val()
+                },
+                function (data, status) {
+                    //alert("Data :" + data + "\n Status :" + status);
+                    alert("đã vào đây");
+                    //Nếu không có lỗi (tức là xóa thành công) --> thông báo đặt hàng thành công --> đẩy về trang chủ
+
+                    if (data === "") {
+                        alert("Bạn đã gửi đơn hàng thành công");
+                        location.href = "/";
+                    }
+
+                });
+        } else {
+            alert("Vui lòng nhập đầy đủ Họ tên và Số điện thoại để đặt hàng");
+        }
     }
 </script>

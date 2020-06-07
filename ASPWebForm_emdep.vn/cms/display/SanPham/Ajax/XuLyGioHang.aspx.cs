@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ASPWebForm_emdep.vn.App_Code;
+using ASPWebForm_emdep.vn.App_Code.Database;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -34,7 +36,92 @@ namespace ASPWebForm_emdep.vn.cms.display.SanPham.Ajax
                 case "CapNhatSoLuongVaoGioHang":
                     CapNhatSoLuongVaoGioHang();
                     break;
+                case "GuiDonHang":
+                    GuiDonHang();
+                    break;
             }
+        }
+        private void GuiDonHang()
+        {
+            string ketQua = "";
+
+            //Lấy các thông tin người dùng gửi lên
+            string hoTen = Request.Params["hoTen"];
+            string diaChi = Request.Params["diaChi"];
+            string soDienThoai = Request.Params["soDienThoai"];
+            string email = Request.Params["email"];
+
+
+            //Nếu tồn tại giỏ hàng thì mới xử lý đặt hàng
+            if (Session["GioHang"] != null)
+            {
+                //Khai báo datatable để chứa giỏ hàng
+                DataTable dtGioHang = new DataTable();
+                dtGioHang = (DataTable)Session["GioHang"];
+
+                #region Lặp trong giỏ hàng để lấy ra tổng tiền
+                double tongTien = 0;
+                for (int i = 0; i < dtGioHang.Rows.Count; i++)
+                {
+                    tongTien += int.Parse(dtGioHang.Rows[i]["SoLuong"].ToString()) * double.Parse(dtGioHang.Rows[i]["GiaSP"].ToString());
+                }
+                #endregion
+
+                #region Kiểm tra và thêm thông tin vào bảng Khách hàng
+
+                string maKH = XuLyThongTinKhachHang(hoTen, diaChi, soDienThoai, email);
+
+                #endregion
+
+                //Lấy ngày giờ hiện tại trả về dạng số để làm mã thanh toán trực tuyến
+                string mathanhtoantructuyen = DateTime.Now.Ticks.ToString();
+
+                #region Thêm thông tin vào bảng Đơn đặt hàng
+                //Tạo đơn đặt hàng
+                DateTime ngayTao = DateTime.Now;
+                DonDatHang.Dondathang_Inser(ngayTao, tongTien.ToString(), "", maKH, hoTen, soDienThoai, email, "");
+
+                //Lấy ra thông tin Đơn đặt hàng vừa tạo
+                DataTable dtDonDatHang = DonDatHang.Thongtin_Dondathang_Desc();
+                string maDonDatHang = dtDonDatHang.Rows[0]["MaDonDatHang"].ToString();
+                #endregion
+
+                #region Đọc giỏ hàng và thêm từng sản phẩm vào bảng Chi tiết đơn đặt hàng
+                for (int i = 0; i < dtGioHang.Rows.Count; i++)
+                {
+                    ChiTietDonDatHang.Chitietdondathang_Inser(dtGioHang.Rows[i]["MaSP"].ToString(), maDonDatHang, dtGioHang.Rows[i]["SoLuong"].ToString(), dtGioHang.Rows[i]["GiaSP"].ToString(), "");
+                }
+                #endregion
+
+                #region Xóa session giỏ hàng
+
+                Session["GioHang"] = null;
+
+                #endregion
+
+                
+            }
+            else
+                ketQua = "Giỏ hàng đã hết hạn, vui lòng thực hiện chọn lại sản phẩm và đặt hàng lại";
+
+            Response.Write(ketQua);
+        }
+        private string XuLyThongTinKhachHang(string hoTen, string diaChi, string soDienThoai, string email)
+        {
+            //Lấy danh sách khách hàng theo email --> nếu chưa có --> Thêm mới, nếu đã có thì không thực hiện gì nữa
+            DataTable dt = KhachHang.Thongtin_Khachhang_by_emailkh(email);
+            if (dt.Rows.Count == 0)
+            {
+                //Thêm mới khách hàng với mật khẩu chính là email của khách hàng
+                string matKhau = MaHoa.MaHoaMD5(email);
+                KhachHang.Khachang_Inser(hoTen, diaChi, soDienThoai, email, matKhau, "");
+
+                //Thực hiện lấy lại thông tin khách hàng vừa thêm và trả về mã khách hàng
+                dt = KhachHang.Thongtin_Khachhang_by_emailkh(email);
+                return dt.Rows[0]["MaKH"].ToString();
+            }
+            else
+                return dt.Rows[0]["MaKH"].ToString();
         }
         private void CapNhatSoLuongVaoGioHang()
         {

@@ -1098,6 +1098,7 @@
     <Content Include="js\full-width-slider.slider\with-jquery.html" />
     <Content Include="js\index.js" />
     <Content Include="js\jquery-1.8.3.min.js" />
+    <Content Include="js\jquery-3.5.1.min.js" />
     <Content Include="Login.aspx" />
     <Content Include="pic\anhsp\ao-nu.jpg" />
     <Content Include="pic\anhsp\ao-nu1.jpg" />
